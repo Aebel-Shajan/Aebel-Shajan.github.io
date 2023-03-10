@@ -79,6 +79,7 @@ main {
     "pages pages pages"; 
 }
 .pages {
+  position: relative;
   grid-area: pages;
   display: flex;
   align-items: center;
@@ -119,11 +120,11 @@ main {
 }
 
 .project-title {
-  font-size: 1.5vmax;
+  font-size: 1rem ;
 }
 
 .project-description {
-  font-size: 1vmax;
+  font-size: 0.9rem ;
 }
 
 /* Style inputs with type="text", select elements and textareas */
@@ -162,7 +163,7 @@ input[type=submit]:hover {
   border-radius: 5px;
   background-color:#dbdbdb3d;
   padding: 20px;
-  font-size: 1vmax;
+  font-size: 1rem;
   text-align: left;
   
 }

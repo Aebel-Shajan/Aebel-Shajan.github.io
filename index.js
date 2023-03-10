@@ -27,7 +27,12 @@ camera.position.setZ(30);
 camera.up = vec(0,1,0);
 camera.lookAt(vec(0,0,0));
 scene.add(camera);
-
+window.addEventListener( 'resize', onWindowResize, false );
+function onWindowResize(){
+    camera.aspect = window.innerWidth / window.innerHeight;
+    camera.updateProjectionMatrix();
+    renderer.setSize( window.innerWidth, window.innerHeight );
+}
 
 // Lights
 const pointLight = new THREE.PointLight(0xffffff);
@@ -141,7 +146,7 @@ function animate() {
   }
   
   // Move the camera towards the target position
-  const minCamDistance = 5*objects[targetIndex].radius*Math.min(window.innerWidth, window.innerHeight)/500;
+  const minCamDistance = 5*objects[targetIndex].radius/(0.0007*Math.max(window.innerWidth, window.innerHeight));
   const targetPosition = vec().copy(objects[targetIndex].mesh.position).add(vec(0, 0, minCamDistance));
   const cameraPosition = vec().copy(camera.position);
   const cameraDirection = vec().subVectors(
