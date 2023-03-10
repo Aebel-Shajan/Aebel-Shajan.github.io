@@ -1,0 +1,182 @@
+
+canvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+  }
+
+a {
+  text-decoration: none;
+  color: orange;
+}
+:root {
+    --dark-bg: rgba(15, 15, 15, 0.95);
+    --spacing: 350px;
+  
+    font-family: 'Lucida Console', sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+icon {
+  list-style-type: none;
+  font-size: 10vmin;
+}
+button {
+  background: linear-gradient(45deg, #000000, #dbdbdb3d);
+  background-size: 200% auto;
+  background-position-x: -20px ;
+  border-color: rgba(255, 255, 255, 0.11);
+  border-width: 0.5vmin;       
+  border-radius: 35%;
+  border-style: solid;
+
+  color: rgba(255, 255, 255, 0.507);     
+  margin: 10px;
+  width: 15vmin;
+  height: 15vmin;
+  font-family: 'Lucida Console', sans-serif;
+  font-size: 2vmin;
+  text-align: center;
+  text-transform: uppercase;
+  transition: 0.5s;
+  animation:example;
+}
+
+button:hover {
+  background-size: 200% auto;
+  border-color: rgba(255, 252, 252, 0.603);
+  background-position: right center; /* change the direction of the change here */
+  color: #fff;
+  text-decoration: none;
+  position: relative;
+}
+
+button.active {
+  background-size: 200% auto;
+  border-color: rgba(255, 252, 252, 0.603);
+  background-position: right center; /* change the direction of the change here */
+  color: #fff;
+  text-decoration: none;
+  position: relative;
+  animation: myfirst 2s ease-in-out 0s infinite alternate;
+}
+
+
+main {
+  display: grid; 
+  grid-template-columns: 1.2fr 0.6fr 1.2fr; 
+  grid-template-rows: 0.8fr 1.7fr 0.5fr;
+  height: 95vh;
+  gap: 0px 0px; 
+  color: white;
+  grid-template-areas: 
+    "description description description"
+    "panel-1 . panel-2"
+    "pages pages pages"; 
+}
+.pages {
+  grid-area: pages;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.description {
+  grid-area: description;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  animation: fadeIn 2s;
+}
+.panel-1 { 
+  grid-area: panel-1;
+  display: flex;
+  justify-content: left;
+  padding: 10%;
+
+ }
+.panel-2 {
+  grid-area: panel-2;
+  display: flex;
+  justify-content: right;
+  text-align: right;
+  padding: 10%;
+  word-break: break-word;
+}
+
+.hide {
+  display: none;
+}
+
+.show {
+  position: relative;
+  animation: myfirst 4s ease-in-out 0s infinite alternate;
+  animation: fadeIn 5s;
+}
+
+.project-title {
+  font-size: 1.5vmax;
+}
+
+.project-description {
+  font-size: 1vmax;
+}
+
+/* Style inputs with type="text", select elements and textareas */
+input[type=text], select, textarea {
+  width: 100%; /* Full width */
+  padding: 12px; /* Some padding */ 
+  border: 1px solid #ccc; /* Gray border */
+  border-radius: 4px; /* Rounded borders */
+  box-sizing: border-box; /* Make sure that padding and width stays in place */
+
+  margin-bottom: 10px; /* Bottom margin */
+  resize: vertical /* Allow the user to vertically resize the textarea (not horizontally) */
+}
+
+/* Style the submit button with a specific background color etc */
+input[type=submit] {
+  background: linear-gradient(45deg, #000000, #dbdbdb3d);
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: 0.5s;
+  position: relative;
+}
+
+/* When moving the mouse over the submit button, add a darker green color */
+input[type=submit]:hover {
+  border-color: rgba(255, 252, 252, 0.603);
+  background-position: right center; /* change the direction of the change here */
+  position: relative;
+}
+
+/* Add a background color and some padding around the form */
+.container {
+  border-radius: 5px;
+  background-color:#dbdbdb3d;
+  padding: 20px;
+  font-size: 1vmax;
+  text-align: left;
+  
+}
+
+@keyframes myfirst {
+  0%   {top:0px;}
+  100%  {top:10px;}
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}

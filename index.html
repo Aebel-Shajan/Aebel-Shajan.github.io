@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/style.css" />
+    <script src="https://cdn.jsdelivr.net/npm/iconify-icon@1.0.7/dist/iconify-icon.min.js"></script>
+    <title>Aebel Shajan</title>
+  </head>
+  <!--code is horrible 😭😭😭 i know. Dont judge me--->
+  <body>
+    <canvas id="bg"></canvas>
+    <main>
+
+      <div class="description">
+        <page class="show" id="t1">
+          My name is Aebel (like as in hire-able).<br>
+          I'm a software developer and a maths & physics student at the University of Manchester.<br>
+          I'm interested in 3D graphics, game development, web development and machine learning.<br>
+
+          <br><br> (website doesnt work on mobile yet)
+        </page>
+        <page class="hide" id="t2">
+          I like to code
+        </page>
+        <page class="hide" id="t3">
+          I've worked on a few projects
+        </page>
+        <page class="hide" id="t4">
+          You can contact me here:
+        </page>
+      </div>
+
+      <div class="panel-1">
+        <page class="show" id="l1">
+          
+        </page>
+        <page class="hide" id="l2">
+          <p>I'm proficient in: </p>
+          <icon>
+            <iconify-icon icon="logos:c-plusplus"></iconify-icon>
+            <iconify-icon icon="skill-icons:python-light"></iconify-icon>
+            <iconify-icon icon="logos:javascript"></iconify-icon>
+            <iconify-icon icon="logos:html-5"></iconify-icon>
+            <iconify-icon icon="logos:css-3"></iconify-icon>
+          </icon>
+          <br><br>
+          <p>I've used this libraries: </p>
+          <icon>
+            <iconify-icon icon="skill-icons:tensorflow-light"></iconify-icon>
+            <iconify-icon icon="simple-icons:keras"></iconify-icon>
+          </icon>
+        </page>
+
+        <page class="hide" id="l3">
+            <p class="project-title">
+              Classification of Antimicrobial Peptides using Machine Learning.<br>
+            </p>
+            <p class="project-description">
+              Language: Python <br>
+              Libraries: Tensorflow, Keras, pandas, numpy etc..<br>
+              Tools used: Google Colab, Visual Studio Code <br>
+            </p><br><br>
+ 
+            <p class="project-title">
+              Pagerank algorithm & its applications.<br>
+            </p>
+            <p class="project-description">
+              Language: Matlab <br>
+              Tools used: Latex<br>
+            </p><br><br>
+          </page>
+
+        <page class="hide" if>
+          <p>links:<br></p>
+          <icon>
+          <a title="linkedIn" target='blank' href='https://www.linkedin.com/in/aebel-shajan-08a87a242/'>
+            <iconify-icon icon="logos:linkedin-icon"></iconify-icon><br>
+          </a>
+          <a title="github" target='blank' href='https://github.com/Aebel-Shajan'>
+            <iconify-icon icon="mdi:github"></iconify-icon><br>
+          </a>
+          </icon>
+        </page>
+         
+      </div>
+      <div class="panel-2">
+        <page class="hide" id="r1">
+        </page>
+        <page class="hide" id="r2">
+          <p>Tools I've used: </p>
+          <icon>
+            <iconify-icon icon="vscode-icons:file-type-vscode"></iconify-icon>
+            <iconify-icon icon="simple-icons:googlecolab"></iconify-icon>
+            <iconify-icon icon="mdi:github"></iconify-icon>
+            <iconify-icon icon="tabler:brand-github-copilot"></iconify-icon>
+          </icon>
+        </page>
+        <page class="hide" id="r3">
+          <a href="https://fuze4catalogue.w3spaces.com/" target="blank">
+          <p class="project-title">
+            Game selection Website<br>
+          </p>
+          <p class="project-description">
+            Language: HTML, CSS, Javascript <br>
+            Tools used: Visual Studio Code <br>
+          </p><br><br>
+          </a>
+        </page>
+
+        <page class="hide" id="r4">
+          <div class="container">
+            Send me an email! <br><br><br>
+            <form action="mailto:aebelshajan.work@gmail.com" method="GET">
+              Subject:
+              <input name="subject" type="text" title="body" />
+              Body:
+              <textarea name="body" title="body"></textarea>
+              <input type="submit" value="Compose mail" />
+          </form>
+        </div>
+        </page>
+      </div>
+
+      <div class="pages">
+        <button type="button" class="active">Home</button>
+        <button type="button" class="inactive">Skills</button>
+        <button type="button" class="inactive">Projects</button>
+        <button type="button" class="inactive">Contact</button>
+      </div>
+    </main>
+    <script type="module" src="/index.js"></script>
+
+  </body>
+</html>
