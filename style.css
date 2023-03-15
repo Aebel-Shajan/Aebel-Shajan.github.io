@@ -10,7 +10,7 @@ canvas {
 
 a {
   text-decoration: none;
-  color: orange;
+  color: rgb(231, 208, 208);
 }
 :root {
     --dark-bg: rgba(15, 15, 15, 0.95);
@@ -36,12 +36,12 @@ button {
 
   color: rgba(255, 255, 255, 0.507);     
   margin: 10px;
-  width: 15vmin;
-  height: 15vmin;
+  width: 17vmin;
+  height: 17vmin;
   font-family: 'Lucida Console', sans-serif;
   font-size: 2vmin;
   text-align: center;
-  text-transform: uppercase;
+
   transition: 0.5s;
   animation:example;
 }
@@ -67,16 +67,16 @@ button.active {
 
 
 main {
-  display: grid; 
+  display: grid;
+  padding: 0 1rem;
   grid-template-columns: 1.2fr 0.6fr 1.2fr; 
   grid-template-rows: 0.8fr 1.7fr 0.5fr;
-  height: 95vh;
-  gap: 0px 0px; 
+  height: 90vh; 
   color: white;
   grid-template-areas: 
     "description description description"
     "panel-1 . panel-2"
-    "pages pages pages"; 
+    "pages pages pages";
 }
 .pages {
   position: relative;
@@ -84,6 +84,7 @@ main {
   display: flex;
   align-items: center;
   justify-content: center;
+
 }
 .description {
   grid-area: description;
@@ -97,7 +98,6 @@ main {
   grid-area: panel-1;
   display: flex;
   justify-content: left;
-  padding: 10%;
 
  }
 .panel-2 {
@@ -105,8 +105,8 @@ main {
   display: flex;
   justify-content: right;
   text-align: right;
-  padding: 10%;
   word-break: break-word;
+
 }
 
 .hide {

@@ -42,6 +42,13 @@ scene.add(ambientLight, pointLight);
 
 
 ////// Objects //////
+// floating object
+const objMaterial = new THREE.MeshBasicMaterial({map: textureLoader.load("assets/arrow.png")});
+objMaterial.transparent = true;
+const size = 2;
+const obj = new THREE.Mesh(new THREE.BoxGeometry( size, size, 0), objMaterial);
+scene.add(obj);
+
 // Stars
 const starMaterial = new THREE.MeshStandardMaterial({ color: 0xffffff });
 function addStar() {
@@ -95,12 +102,15 @@ class Planet {
     this.angle += this.speed;
     const x = Math.cos(this.angle) * this.distance;
     const z = Math.sin(this.angle) * this.distance;
-    this.setPlanetPosition(vec(x, 0, z));
+    this.setPosition(vec(x, 0, z));
     this.mesh.rotation.y -= 0.01;
   }
-  setPlanetPosition(pos) {
+  setPosition(pos) {
     this.mesh.position.copy(pos);
     this.textMesh.position.copy(pos)
+  }
+  getPosition() {
+    return this.mesh.position;
   }
   rotateText() {
     this.textMesh.rotation.z += 0.01;
@@ -129,11 +139,23 @@ let objects = [sun, planet_1, planet_2, planet_3];
 let targetIndex = 0;
 
 
+function hoverNextToPlanet(planet, object, relativePos) {
+  const size = 0.25*planet.radius;
+  const dir = clock.getElapsedTime()%2 < 1 ? 1 : -1;
+  const offset = vec(0, Math.sin(clock.getElapsedTime()*2) , 0).multiplyScalar(0.1*planet.radius)
+  object.position.copy(planet.getPosition().add(relativePos.multiply(vec(size, size, size)).add(offset)));
+  object.scale.copy(vec(size, size, 0.1*size));
+  object.lookAt(camera.position);
+}
+
 // Animation Loop
 const clock = new THREE.Clock();
 function animate() {
   requestAnimationFrame(animate);
 
+  // Set obj positin
+  hoverNextToPlanet(objects[targetIndex], obj, vec(0, 6, 0));
+  
   // Rotate the torus
   torus.rotation.x += 0.01;
   torus.rotation.y += 0.005;
@@ -146,8 +168,8 @@ function animate() {
   }
   
   // Move the camera towards the target position
-  const minCamDistance = 5*objects[targetIndex].radius/(0.0007*Math.max(window.innerWidth, window.innerHeight));
-  const targetPosition = vec().copy(objects[targetIndex].mesh.position).add(vec(0, 0, minCamDistance));
+  const minCamDistance = 5*objects[targetIndex].radius/(0.001*Math.min(window.innerWidth, window.innerHeight));
+  const targetPosition = vec().copy(objects[targetIndex].mesh.position).add(vec(0, 0.2, 1).normalize().multiplyScalar(minCamDistance));
   const cameraPosition = vec().copy(camera.position);
   const cameraDirection = vec().subVectors(
     targetPosition,
@@ -171,7 +193,7 @@ function animate() {
         objects[i].setOpacity(1);
         torus.material.opacity = 1;
       } else {
-        const offOpacity = 0.2;
+        const offOpacity = 0.15;
         objects[i].setOpacity(offOpacity);
         torus.material.opacity = offOpacity;
       }
