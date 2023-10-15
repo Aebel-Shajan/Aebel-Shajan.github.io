@@ -1,147 +1,191 @@
-
 * {
-    box-sizing: border-box;
-    
-  }
+  box-sizing: border-box;
+}
+
+/* Style the body */
+body {
+  font-family: 'Nunito', sans-serif;
+  margin: 0;
+}
+
+/* Header/logo Title */
+.header {
+  padding: 5px;
+  text-align: center;
+  background-image:
+    linear-gradient(to bottom, transparent, #333),
+    url("assets/space.jpg");
+  color: white;
+}
+
+/* Increase the font size of the heading */
+.header h1 {
+  font-size: 40px;
+}
+
+/* Style the top navigation bar */
+.navbar {
+  position: sticky;
+  top: -3px;
+  overflow: hidden;
+  background-color: #333;
+}
+
+/* Style the navigation bar links */
+.navbar a {
+  float: left;
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 20px;
+  text-decoration: none;
+}
+
+/* Right-aligned link */
+.navbar a.right {
+  float: right;
+}
+
+/* Change color on hover */
+.navbar a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+
+#bg {
+  width: 100vw;
+  height: 100vh;
+  background: #333;
+}
+
+/* Create two unequal columns that sits next to each other */
+/* Column container */
+.row {
+  display: flex;
+  overflow: hidden;
   
-  /* Style the body */
-  body {
-    font-family: 'Nunito', sans-serif;
-    margin: 0;
-  }
-  
-  /* Header/logo Title */
-  .header {
-    padding: 20px;
-    text-align: center;
-    background:  #333;
-    color: white;
-  }
-  
-  /* Increase the font size of the heading */
-  .header h1 {
-    font-size: 40px;
-  }
-  
-  /* Style the top navigation bar */
-  .navbar {
-    position: sticky;
-    top: 0;
-    overflow: hidden;
-    background-color: #333;
-  }
-  
-  /* Style the navigation bar links */
-  .navbar a {
-    
-    float: left;
-    display: block;
-    color: white;
-    text-align: center;
-    padding: 14px 20px;
-    text-decoration: none;
-  }
-  
-  /* Right-aligned link */
-  .navbar a.right {
-    float: right;
-  }
-  
-  /* Change color on hover */
-  .navbar a:hover {
-    background-color: #ddd;
-    color: black;
-  }
-  
-  /* Column container */
-  .row {  
-    display: -ms-flexbox; /* IE10 */
-    display: flex;
-    -ms-flex-wrap: wrap; /* IE10 */
-    flex-wrap: wrap;
-  }
-  
-  .center {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
+}
+
+/* Sidebar/right column */
+.sidebar {
+  flex: 30%;
+  background-color: #f1f1f1;
+  padding: 20px;
+}
+
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Main column/left column */
+.main {
+  flex: 70%;
+  padding: 20px;
+}
+
+.button {
+  display: inline-block;
+  width: 100%;
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+  margin: 5px 0;
+  background-color: #333;
+  color: white;
+  text-decoration: none;
+}
+
+/* Footer */
+.footer {
+  padding: 20px;
+  text-align: center;
+  background: #ddd;
+}
+
+
+
+.project-container {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  padding: 10px;
+  background: #ddd
+}
+
+.project-image {
+  width: 30%;
+  overflow: hidden;
+  margin: 10px;
+}
+
+.project-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+
+}
+
+.project-description {
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  border-color: #333;
+  border-width: 10px;
+}
+
+
+.project-description p {
+  padding: 0px;
+  margin: 5px
+}
+
+.project-skills {
+  padding: 0;
+  display: flex;
+  list-style: none;
+  flex-wrap: wrap;
+}
+
+.project-skills li {
+  background-color: #333;
+  color: white;
+  padding: 5px 10px;
+  margin: 5px;
+  font-size: 14px;
+  white-space: nowrap;
+}
+
+/* Responsive layout - when the screen is less than 700px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 1000px) {
+  .row {
+    flex-direction: column;
   }
 
-  /* Create two unequal columns that sits next to each other */
-  /* Sidebar/left column */
-  .sidebar {
-    -ms-flex: 30%; /* IE10 */
-    flex: 30%;
-    background-color: #f1f1f1;
-    padding: 20px;
-  }
-  
-  /* Main column */
-  .main {   
-    -ms-flex: 70%; /* IE10 */
-    flex: 70%;
-    background-color: white;
-    color: #333;
-    padding: 20px;
-  }
-  
-  /* Fake image, just for this example */
-  .fakeimg {
-    background-color: #aaa;
-    width: 100%;
-    padding: 20px;
+  .project-container {
+    flex-direction: column;
   }
 
-  .image-box {
+  .project-image {
     width: 100%;
     height: 200px;
-    background-color:#333;
-    overflow: hidden;
-    box-shadow: 5px 5px 15px 0px gray, inset 0px 0px 10px 0px black;
+    margin: 0;
   }
-  
-  .image-box img {
+
+  .project-description {
     width: 100%;
-    height: 100%;
+  }
+}
 
-    object-fit: cover;
+/* Responsive layout - when the screen is less than 400px wide, make the navigation links stack on top of each other instead of next to each other */
+@media screen and (max-width: 400px) {
+  .navbar a {
+    float: none;
+    width: 100%;
   }
-
-  #canvas-container {
-    width: 95vw;
-    height: 100vh;
-  }
-
-  .button {
-    display: inline-block;
-    width: 100%;  /* Set width */
-    height: 50px; /* Set height */
-    line-height: 50px; /* Align text vertically */
-    text-align: center; /* Align text horizontally */
-    margin: 5px 0; /* Add some vertical margin between buttons */
-    background-color:#333;
-    color: white;
-    text-decoration: none;
-  }
-  
-  /* Footer */
-  .footer {
-    padding: 20px;
-    text-align: center;
-    background: #ddd;
-  }
-  
-  /* Responsive layout - when the screen is less than 700px wide, make the two columns stack on top of each other instead of next to each other */
-  @media screen and (max-width: 1000px) {
-    .row {   
-      flex-direction: column;
-    }
-  }
-  
-  /* Responsive layout - when the screen is less than 400px wide, make the navigation links stack on top of each other instead of next to each other */
-  @media screen and (max-width: 400px) {
-    .navbar a {
-      float: none;
-      width: 100%;
-    }
-  }
+}

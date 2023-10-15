@@ -17,8 +17,8 @@ const normalMaps = [
 
 
 ////// Setup //////
-let width = 0.95*window.innerWidth;
-let height = 0.6*window.innerHeight;
+let width = window.innerWidth;
+let height = 0.75*window.innerHeight;
 
 const scene = new THREE.Scene();
 const camera = new THREE.PerspectiveCamera(75, width / height, 3, 1000);
@@ -33,11 +33,12 @@ camera.lookAt(vec(0,0,0));
 scene.add(camera);
 window.addEventListener( 'resize', onWindowResize, false );
 function onWindowResize(){
-    width = 0.95*window.innerWidth;
-    height = 0.6*window.innerHeight;
+    width = window.innerWidth;
+    height = 0.75*window.innerHeight;
+    renderer.setPixelRatio(window.devicePixelRatio);
+    renderer.setSize(width, height);
     camera.aspect = width / height;
     camera.updateProjectionMatrix();
-    renderer.setSize(width, height);
 }
 
 // Lights
