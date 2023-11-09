@@ -9,7 +9,6 @@ document.addEventListener("DOMContentLoaded", function () {
       data.forEach((project) => {
         const projectElement = document.createElement('div');
         projectElement.classList.add('project-container');
-
         projectElement.innerHTML = `
           <a href="${project.url}" target="_blank" class="project-image">
             <img src="${project.image}" alt="${project.title}" />
@@ -22,14 +21,12 @@ document.addEventListener("DOMContentLoaded", function () {
               ${project.skills.map((skill) => `<li>${skill}</li>`).join('')}
             </ul>         
           </div>
-          
           `;
-
         projectsContainer.appendChild(projectElement);
       });
+
     })
     .catch((error) => {
       console.error('Error fetching data:', error);
     });
-
 });

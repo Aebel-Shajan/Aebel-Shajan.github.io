@@ -11,7 +11,6 @@ document.addEventListener("DOMContentLoaded", function() {
     <a href="index.html">Projects</a>
     <a href="skills.html">Skills</a>
     <a href="CV.html">CV</a>
-    <a href="solar_system.html" class="right">Solar System</a>
     </div>
     `;
     document.body.insertAdjacentHTML("afterbegin", navbar);

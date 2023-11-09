@@ -41,11 +41,6 @@ body {
   text-decoration: none;
 }
 
-/* Right-aligned link */
-.navbar a.right {
-  float: right;
-}
-
 /* Change color on hover */
 .navbar a:hover {
   background-color: #ddd;
