@@ -1,4 +1,4 @@
-# [Project Name] - Aebels's Personal Website
+# Aebels's Personal Website
 
 ## Description
 
