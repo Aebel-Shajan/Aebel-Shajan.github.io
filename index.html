@@ -1,27 +1,102 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<title>Aebel Shajan</title>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" type="text/css" href="style.css">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;700&display=swap">
-<link rel="icon" href="assets/Emoji_u263a.svg.png" type="image/png">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:200i,300,400&amp;display=swap" rel="stylesheet">
+
+    <title>Aebel's Personal Portfolio</title>
 </head>
 <body>
+    <nav id="navbar" class="nav">
+        <ul class="nav-list">
+            <li><a href="#welcome-section">
+                About
+            </a></li>
+            <li><a href="#projects">
+                Projects
+            </a></li>
+            <li><a href="#cv">
+                CV
+            </a></li>
+            <li><a href="#contact">
+                Contact
+            </a></li>
+        </ul>
+    </nav>
+    
+    <section id="welcome-section">
+        <h1>👋 I'm Aebel</h1>
+        <p>MMath & MPhys Grad</p>
+    </section>
+    <section id="projects">
+        <h2>Here's some of my projects:</h2>
+        <hr>
+        <div class="projects-grid">
+            <a class="project-tile" href="https://github.com/Aebel-Shajan/Quantum-Circuits">
+                <img src=".\assets\Quantum Circuits Picture.png" >
+                <div class="project-description">
+                    <h3>C++ Quantum Circuits Simulator</h3>
+                <p>Created a C++ program to simulate quantum circuits. The program can simulate the effects of quantum gates on qubits and can also simulate the effects of quantum entanglement.</p>
+                </div>
+                
+            </a>
+            <a class="project-tile" href="https://aebel-shajan.github.io/assets/pdfs/Pagerank_Project_Report.pdf">
+                <img src=".\assets\manchester_4000_graph.png" >
+                <div class="project-description">
+                    <h3>Investigation Of The Pagerank Algorithm</h3>
+                <p>Researched the mathematical fundamentals of Google's famous Pagerank algorithm. Recreated the algorithm using MATLAB software and investegated the significance of paramaters within the algorithm. Used data visualization and analysis in Python to convey the results.</p>
+                </div>
+                
+            </a>
+            <a class="project-tile" href="https://colab.research.google.com/drive/1OAbeBDLGDGT8JBRl0X4B-FBsGbCPvMi9?usp=sharing">
+                <img src=".\assets\gcn.png" >
+                <div class="project-description">
+                    <h3>Classification of Antimicrobial Peptides using Machine Learning</h3>
+                <p>Created a Grah Convolution Neural Network (GCNN) to classify antibiotic molecules based on their efficacy. Trained the model on a large dataset of 20,000 molecules using Python in Google Colab.</p>
+                </div>
+                
+            </a>
+            <a class="project-tile" href="https://aebel-shajan.github.io/">
+                <img src=".\assets\personal-website.png" >
+                <div class="project-description">
+                    <h3>Personal Website</h3>
+                <p>Implemented HTML and CSS to create own personal website.</p>
+                </div>
+            </a>
+        </div>
 
-<script src="navbar.js"></script>
-<script src="sidebar.js"></script>
-<script src="projects.js"></script>
-
-
-<div class="row">
-    <div class="main" id="projects-container">
+    </section>
+    <section id="cv">
+        <h2>Here's my CV:</h2>
         
-    </div>
-</div>
+            <object data="assets/Aebel_s_CV_Tech.pdf" type="application/pdf" frameborder="0" width="100%" height="80%y" style="padding: 20px;">
+                <iframe src="https://onedrive.live.com/embed?resid=E26CE18A591C7D47%21108927&authkey=!AJMY1yvBuBtXLeI&em=2" frameborder="0" scrolling="no"></iframe>
+            </object>
+    
+    </section>
 
-
+    <section id="contact">
+        <h2>Contact me!</h2>
+        <div class="contact-links">
+            <a href="https://github.com/Aebel-Shajan" target="_blank" class="btn contact-details" id="profile-link">
+                <i class="fab fa-github"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/aebel-shajan/" target="_blank" class="btn contact-details">
+                <i class="fab fa-linkedin-in"></i>
+            </a>
+            <a href="https://www.freecodecamp.org/Aebel" target="_blank" class="btn contact-details">
+                <i class="fab fa-free-code-camp"></i>
+            </a>
+            <a href="https://www.hackerrank.com/profile/aebelshajan_work" target="_blank" class="btn contact-details">
+                <i class="fab fa-hackerrank"></i>
+            </a>
+            <a href="mailto:aebelshajan.work@gmail.com" class="btn contact-details">
+                <i class="fas fa-at"></i>
+            </a>
+        </section>
 </body>
 </html>

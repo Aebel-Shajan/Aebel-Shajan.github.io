@@ -1,0 +1,151 @@
+* {
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+    --main-white: #fafaff;
+    --main-black: #22333b;
+    --main-grey: #e5e5e5;
+    scroll-behavior: smooth;
+}
+
+
+body {
+    margin: 0;
+    background-color: var(--main-white);
+    font-size: 2vh;
+}
+
+.nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: row;
+    height: 5em;
+    background-color: var(--main-black);
+    width: 100vw;
+
+}
+
+.nav-list {
+    width: 100%;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    /*layout*/
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+a {
+    text-decoration: none;
+    color: var(--main-black);
+}
+
+.nav-list a {
+    padding: 2em 1.5em;
+    color: var(--main-white);
+}
+
+
+.nav-list a:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+#welcome-section {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 2em;
+}
+
+#welcome-section p {
+    font-style: italic;
+}
+
+section {
+    padding: 2em;
+    padding-top: 6em;
+}
+
+hr {
+    color: var(--main-black);
+}
+
+#projects {
+    background-color: var(--main-grey);
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(20em, 1fr));
+    grid-template-rows: 1fr 1fr;
+    gap: 2rem;
+    width: 100%;
+    max-width: 1280px;
+    margin: 0 auto;
+    margin-top: 3rem;
+}
+
+.project-tile {
+    background-color: var(--main-white);
+}
+
+.project-tile > img {
+    object-fit: cover;
+    width: 100%;
+    height: 10rem;
+}
+
+.project-description {
+    padding: 1rem;
+    font-size: medium;
+}
+
+#cv {
+    height: 100vh;
+}
+
+.pdf {
+    height: fit-content;
+}
+
+#contact {
+    background-color: var(--main-grey);
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    background-color: var(--main-black);
+    color: var(--main-white);
+    min-height: 100vh;
+}
+
+.contact-links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    flex-wrap: wrap;
+}
+
+.contact-details{
+    font-size: 2rem;
+    color: var(--main-white);
+    padding: 2rem;
+}
+
+@media only screen and (max-width: 600px) {
+    body {
+        font-size: 1.2vh;
+    }
+
+    .nav-list a {
+        font-size: 1.4vh;
+    }
+}
