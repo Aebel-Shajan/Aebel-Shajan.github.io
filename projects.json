@@ -1,6 +1,6 @@
 [
 	{
-		"title": "Classification of Antimicrobial Peptides using Machine Learning",
+		"title": "Convolutional Neural Network",
 		"image": "assets/machine-learning-project.png",
     "date": "January 2023",
     "description": "Created a Grah Convolution Neural Network (GCNN) to classify antibiotic molecules based on their efficacy. Trained the model on a large dataset of 20,000 molecules using Python in Google Colab.",
