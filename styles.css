@@ -5,13 +5,15 @@
 	margin: 0;
 	padding: 0;
 	font-family: "Poppins", Courier, monospace;
-	--blue-1: #C4DFDF;
-	--blue-2: #D2E9E9;
-	--blue-3: #E3F4F4;
+	--blue-1: #7AD7F0;
+	--blue-2: #92DFF3;
+	--blue-3: #B7E9F7;
 	--white-1: #F8F6F4;
 	--glass: #ffffff69;
+	--glass-opaque: #ffffffff;
 	--unit: min(100vw, 100vh);
-	font-size: 1.75vh
+	font-size: 1.75vh;
+	scroll-behavior: smooth;
 }
 
 body {
@@ -19,7 +21,8 @@ body {
 	height: 100vh;
 	display: grid;
 	grid-template-columns: 3fr 7fr;
-	background-color: var(--blue-1);
+	background-image: linear-gradient(to right, var(--blue-1), var(--blue-3));
+	/* background-color: var(--blue-1); */
 }
 
 .grid {
@@ -36,6 +39,10 @@ body {
 	display: flex;
 	align-items: center;
 	justify-content: center;
+	transition: background-color 0.8s;
+}
+.grid-item:hover {
+	background-color: var(--glass-opaque);
 }
 
 .fill-width {
