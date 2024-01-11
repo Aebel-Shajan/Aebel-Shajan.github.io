@@ -1,4 +1,5 @@
 import projects from './projects.json' assert {type: "json"};
+import codepenProjects from './codepen-projects.json' assert {type: "json"};
 
 console.log(projects);
 projects.forEach(project => {
@@ -31,3 +32,16 @@ projects.forEach(project => {
 	}
 	document.querySelector("#content-grid").appendChild(projectContainer);
 });
+
+let codepenIndex = 0;
+document.querySelector("#next-codepen").addEventListener("click", () => {
+	codepenIndex = (codepenIndex + 1 ) % codepenProjects.length;
+	console.log("codepenIndex: ", codepenIndex);
+	document.querySelector("#codepen-iframe").src = codepenProjects[codepenIndex]["link"];
+})
+document.querySelector("#previous-codepen").addEventListener("click", () => {
+	codepenIndex -= 1;
+	if (codepenIndex < 0) {codepenIndex += codepenProjects.length}
+	console.log("codepenIndex: ", codepenIndex);
+	document.querySelector("#codepen-iframe").src = codepenProjects[codepenIndex]["link"];
+})

@@ -1,19 +1,22 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
 * {
-	box-sizing: border-box;
-	margin: 0;
-	padding: 0;
-	font-family: "Poppins", Courier, monospace;
+	/* Global variables */
 	--blue-1: #7AD7F0;
 	--blue-2: #92DFF3;
 	--blue-3: #B7E9F7;
 	--white-1: #F8F6F4;
 	--glass: #ffffff69;
-	--glass-opaque: #ffffffcc;
+	--opaque-glass: #ffffffcc;
 	--unit: min(100vw, 100vh);
+
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	font-family: "Poppins", Courier, monospace;
 	font-size: 1.75vh;
 	scroll-behavior: smooth;
+	
 }
 
 body {
@@ -21,10 +24,12 @@ body {
 	height: 100vh;
 	display: grid;
 	grid-template-columns: 3fr 7fr;
-	background-image: linear-gradient(to right, var(--blue-1), var(--blue-3));
-	/* background-color: var(--blue-1); */
+	background:
+	linear-gradient(to right, #f5f5f5bf, transparent),
+	url(https://grainy-gradients.vercel.app/noise.svg);
+	background-color: #06845c;
 }
-
+/* Applies to elements that make use of grid system */
 .grid {
 	display: grid;
 	gap: 1rem;
@@ -40,8 +45,9 @@ body {
 	justify-content: center;
 	transition: background-color 0.8s;
 }
+
 .grid-item:hover {
-	background-color: var(--glass-opaque);
+	background-color: var(--opaque-glass);
 }
 
 .fill-width {
@@ -64,6 +70,7 @@ body {
 	grid-row: span 3;
 }
 
+/* About / nav elements */
 #about-container {
 	width: 100%;
 	padding: 20% 1rem;
@@ -79,16 +86,18 @@ body {
 	width: 100%;
 	height: 100%;
 	grid-template-columns: repeat(auto-fit, minmax(30%, 1fr));
+	grid-template-rows: 2fr 1fr 1fr;
 }
 
 #name-item {
-	font-weight: 900;
-	font-size: 2rem;
+	font-weight: 500;
+	font-size: 6rem;
 	letter-spacing: .5rem;
 	color: black;
 	text-align: center;
 }
 
+/* Content container elements */
 #content-container {
 	overflow-y: scroll;
 	display: flex;
@@ -97,90 +106,25 @@ body {
 
 #content-grid {
 	display: grid;
-	max-width: 87%;
+	max-width: 63vw;
 	grid-auto-rows: 20vh;
 	grid-template-columns: repeat(auto-fit, minmax(calc(var(--unit)*0.5), 1fr));
 	padding: 1rem;
 	gap: 2rem;
 }
 
-.project-container {
-	display: grid;
-	grid-template-columns: 2fr 3fr;
-	overflow: hidden;
-}
-
-.project-image-container {
-	width: 100%;
-	height: 100%;
-	overflow: hidden;
-}
-
-.project-image {
-	width: 100%;
-	height: 100%;
-	object-fit: cover;
-	object-position: top left;
-}
-
-.project-content-container {
-	height: 100%;
-	width: 100%;
-	min-height: 0;
-	min-width: 0;
-	display: grid;
-	padding: 1rem;
-	grid-template-rows: auto auto 1fr 1fr 1fr;
-	grid-template-areas:
-		"t t t t"
-		"_ _ d d"
-		"p p p p"
-		"p p p p"
-		"l l l l"
-}
-
-.project-title {
-	grid-area: t;
-	overflow: hidden;
-	font-weight: 600;
-	font-size: 1rem;
-}
-
-.project-date {
-	grid-area: d;
-	overflow: hidden;
-	font-size: 0.7rem;
-}
-
-.project-description {
-	grid-area: p;
-	overflow: hidden;
-	font-size: 0.7rem;
-	height: 100%;
-	width: 100%;
-}
-
-.project-links {
-	grid-area: l;
-	overflow: hidden;
-	display: flex;
-	align-items: center;
-}
-
-.project-links>a>i {
-	font-size: 1.3rem;
-	padding: 0.3rem;
-	color: black;
-}
-
-@media (max-aspect-ratio: 1) {
+/* Media Queries */
+@media (max-aspect-ratio: 4/3) {
+	* {
+		font-size: 1.5vh;
+	}
 	body {
 		background-color: orange;
-		grid-template-columns: 1fr;
+		display: block;
 	}
 
 	#about-container {
-		height: fit-content;
+		height: 100%;
 		padding: 1rem;
 	}
 	#content-grid {

@@ -5,7 +5,8 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-	<link rel="stylesheet" href="styles.css" />
+	<link rel="stylesheet" href="styles/main.css" />
+	<link rel="stylesheet" href="styles/utils.css" />
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
 		integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
 	<link href="https://fonts.googleapis.com/css?family=Poppins:200i,300,400&display=swap" rel="stylesheet">
@@ -29,7 +30,7 @@
 
 	<div id="about-container">
 		<div id="about-grid" class="grid">
-			<div id="name-item" class="grid-item fill-width height-3">
+			<div id="name-item" class="grid-item fill-width">
 				Aebel Shajan
 			</div>
 			<a class="grid-item" href="#codepen">
@@ -54,19 +55,24 @@
 	</div>
 	<div id="content-container">
 		<div id="content-grid">
-				<div id="codepen" class="grid-item fill-width">
-					CodePen
+				<div id="codepen" class="heading grid-item fill-width">
+					<button type="button" id="previous-codepen"><</button>
+					Codepen
+					<button type="button" id="next-codepen">></button>
 				</div>
-				<iframe class="grid-item height-3 fill-width"
-				src="https://codepen.io/aebel-shajan/embed/BaMGQGR?default-tab=html%2Cresult" frameborder="no" loading="lazy"
+				<iframe id="codepen-iframe" class="grid-item height-3 fill-width"
+				src="https://codepen.io/aebel-shajan/embed/OJdeNVx?default-tab=result" frameborder="no" loading="lazy"
 				allowtransparency="true" allowfullscreen="true">
 				See the Pen <a href="https://codepen.io/aebel-shajan/pen/BaMGQGR">
 					Random Quote Machine</a> by Aebel (<a href="https://codepen.io/aebel-shajan">@aebel-shajan</a>)
 					on <a href="https://codepen.io">CodePen</a>.
 				</iframe>
-				<embed id="cv" class="grid-item height-2" src="assets/Aebel_s_CV_Tech.pdf" type="application/pdf" width="100%"
+				<div id="cv" class="heading grid-item">
+					CV
+				</div>
+				<embed  class="grid-item height-2" src="assets/Aebel_s_CV_Tech.pdf" type="application/pdf" width="100%"
 				height="100%" />
-				<div id="projects" class="grid-item fill-width">
+				<div id="projects" class="heading grid-item fill-width">
 					Projects
 				</div>
 		</div>
