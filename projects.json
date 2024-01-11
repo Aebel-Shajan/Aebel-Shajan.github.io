@@ -20,7 +20,7 @@
 		"title": "Investigation Of The Pagerank Algorithm",
 		"image": "assets/pagerank-project.png",
     "date": "February 2023",
-    "description": "Researched the mathematical fundamentals of Google's famous Pagerank algorithm. Recreated the algorithm using MATLAB software. Used data visualization and analysis in Python to convey the results.",
+    "description": "Researched the mathematical fundamentals of Google's famous Pagerank algorithm. Recreated the algorithm using MATLAB software.",
     "skills": [
 			"MATLAB",
       "Algorithms",
