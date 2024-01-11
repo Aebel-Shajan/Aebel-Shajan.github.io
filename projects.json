@@ -11,9 +11,9 @@
       "Graph Convolutional Nueral Networks"
     ],
 		"links": {
-			"github": "",
+			"github": "https://github.com/Aebel-Shajan/Peptide_GCN",
 			"colab": "https://colab.research.google.com/drive/1OAbeBDLGDGT8JBRl0X4B-FBsGbCPvMi9?usp=sharing",
-			"pdf": ""
+			"pdf": "https://1drv.ms/b/s!Akd9HFmK4Wzizj-NOfHuNB06Yoyn?e=UGptnf"
 		} 
   },
   {
@@ -27,8 +27,8 @@
       "Data Visualization"
     ],
 		"links": {
-			"github":"",
-			"pdf": "assets/pdfs/Pagerank_Project_Report.pdf"
+			"github":"https://github.com/Aebel-Shajan/pagerank-application",
+			"pdf": "https://1drv.ms/b/s!Akd9HFmK4Wzig6JnOsUC8VcItwvDIw?e=5LZed5"
 		} 
   },
   {
@@ -44,7 +44,7 @@
     ],
 		"links": {
 			"github": "https://github.com/Aebel-Shajan/Quantum-Circuits",
-			"pdf": ""
+			"pdf": "https://1drv.ms/b/s!Akd9HFmK4Wzig6Jlq0y5H2-bTwrILg?e=akOh2a"
 		}
   },
 	{
@@ -53,9 +53,29 @@
 		"date": "January 2024",
 		"description": "Made a screen reader chrome extension which used mozilla/readability.js and the chrome text to speech api.",
 		"links": {
-			"github": "",
 			"chrome": "https://chromewebstore.google.com/detail/subway-surfers-screen-rea/jcijfneifjnhbgahlokgkmpcnocgpegd",
-			"youtube": ""
+			"youtube": "https://www.youtube.com/watch?v=JuJiM2TYbiw"
+		}
+	},
+	{
+		"title":"Youtube Multitasker Chrome Extension",
+		"image": "assets/youtube-multitasker.png",
+		"date": "December 2023",
+		"description": "Chrome extension to watch multiple videos at the same time in the side panel.",
+		"links": {
+			"chrome": "https://chromewebstore.google.com/detail/multiple-yt-vids-in-side/hmaalghckkjijjekbglkebnjhdcebojh",
+			"youtube": "https://youtu.be/Io0iaTg9Z5U"
+		}
+	},
+	{
+		"title": "FreeCodeCamp Sidepanel Extension",
+		"image": "assets/fcc-sidepanel.png",
+		"date": "December 2023",
+		"description": "Chrome extension to quickly access the contents of the FreeCodeCamp curriculum.",
+		"links": {
+			"github": "https://github.com/Aebel-Shajan/FreeCodeCamp-Contents-Chrome-Extension",
+			"chrome": "https://chromewebstore.google.com/detail/contents-panel-for-fcc/cmogdnmmkblhlbdbppfahmclekapmdjo", 
+			"youtube": "https://youtu.be/7N9cAhmy774"
 		}
 	}
 

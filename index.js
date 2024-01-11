@@ -16,6 +16,7 @@ projects.forEach(project => {
 		switch(linkName){
 			case "github":
 			case "chrome":
+			case "youtube":
 				iconName = "fab fa-" + linkName;
 				break;
 			case "pdf":
