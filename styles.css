@@ -1,151 +1,140 @@
-* {
-    font-family: 'Poppins', sans-serif;
-    box-sizing: border-box;
-    --main-white: #fafaff;
-    --main-black: #22333b;
-    --main-grey: #e5e5e5;
-    scroll-behavior: smooth;
-}
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;800;900&display=swap');
 
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	font-family: "Poppins", Courier, monospace;
+	--blue-1: #C4DFDF;
+	--blue-2: #D2E9E9;
+	--blue-3: #E3F4F4;
+	--white-1: #F8F6F4;
+	--glass: #ffffff69;
+}
 
 body {
-    margin: 0;
-    background-color: var(--main-white);
-    font-size: 2vh;
+	width: 100vw;
+	height: 100vh;
+	display: grid;
+	grid-template-columns: 3fr 7fr;
+	background-color: var(--blue-1);
 }
 
-.nav {
-    position: fixed;
-    top: 0;
-    left: 0;
-    display: flex;
-    flex-direction: row;
-    height: 5em;
-    background-color: var(--main-black);
-    width: 100vw;
-
+@media (max-aspect-ratio: 4/3) {
+	body {
+		background-color: orange;
+		grid-template-columns: 1fr;
+		grid-row: auto auto;
+		grid-auto-flow: row;
+	}
 }
 
-.nav-list {
-    width: 100%;
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    /*layout*/
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
+.grid {
+	display: grid;
+	gap: 1rem;
+	padding: 1rem;
 }
 
-a {
-    text-decoration: none;
-    color: var(--main-black);
+.grid-item {
+	background-color: var(--glass);
+	border-radius: 1rem;
+	display: flex;
+	align-items: center;
+	justify-content: center;
 }
 
-.nav-list a {
-    padding: 2em 1.5em;
-    color: var(--main-white);
+.width-2 {
+	grid-column: span 2;
 }
 
-
-.nav-list a:hover {
-    background-color: rgba(255, 255, 255, 0.1);
+.width-3 {
+	grid-column: span 3;
 }
 
-#welcome-section {
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    font-size: 2em;
+.height-2 {
+	grid-row: span 2;
 }
 
-#welcome-section p {
-    font-style: italic;
+.height-3 {
+	grid-row: span 3;
 }
 
-section {
-    padding: 2em;
-    padding-top: 6em;
+#about-container {
+	width: 100%;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 
-hr {
-    color: var(--main-black);
+#about-grid {
+	aspect-ratio: 1;
+	width: 100%;
+	grid-template-columns: 1fr 1fr 1fr;
+	grid-template-rows: 1fr 1fr 1fr 1fr;
 }
 
-#projects {
-    background-color: var(--main-grey);
+#name-item {
+	font-weight: 900;
+	font-size: xx-large;
+	letter-spacing: .5rem;
+	color: black
 }
 
-.projects-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(20em, 1fr));
-    grid-template-rows: 1fr 1fr;
-    gap: 2rem;
-    width: 100%;
-    max-width: 1280px;
-    margin: 0 auto;
-    margin-top: 3rem;
+#content-grid {
+	width: 100%;
+	grid-template-columns: 1fr 1fr;
+	grid-template-rows: 1fr 1fr;
 }
 
-.project-tile {
-    background-color: var(--main-white);
+.project-container {
+	display: grid;
+	grid-template-columns: 2fr 3fr;
+	overflow: hidden;
 }
-
-.project-tile > img {
-    object-fit: cover;
-    width: 100%;
-    height: 10rem;
+.project-image-container {
+	width: 100%;
+	height: 100%;
 }
-
+.project-image {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+.project-content-container {
+	height: 100%;
+	width: 100%;
+	display: grid;
+	padding: 1rem;
+	grid-template-areas:
+		"t t t t"
+		"_ _ d d"
+		"p p p p"
+		"p p p p"
+		"p p p p"
+		"l l l l"
+}
+.project-title {
+	grid-area: t;
+	font-weight: 600;
+	font-size: medium;
+}
+.project-date {
+	grid-area: d;
+	font-size: small;
+}
 .project-description {
-    padding: 1rem;
-    font-size: medium;
+	grid-area: p;
+	text-overflow: ellipsis;
+	font-size: small;
 }
-
-#cv {
-    height: 100vh;
+.project-links {
+	grid-area: l;
+	display: flex;
+	align-items: center;
 }
-
-.pdf {
-    height: fit-content;
-}
-
-#contact {
-    background-color: var(--main-grey);
-    
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    text-align: center;
-    align-items: center;
-    background-color: var(--main-black);
-    color: var(--main-white);
-    min-height: 100vh;
-}
-
-.contact-links {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    flex-wrap: wrap;
-}
-
-.contact-details{
-    font-size: 2rem;
-    color: var(--main-white);
-    padding: 2rem;
-}
-
-@media only screen and (max-width: 600px) {
-    body {
-        font-size: 1.2vh;
-    }
-
-    .nav-list a {
-        font-size: 1.4vh;
-    }
+.project-links > a > i {
+	font-size: 2rem;
+	padding: 0.3rem;
+	color: black;
 }
