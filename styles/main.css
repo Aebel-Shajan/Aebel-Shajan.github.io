@@ -1,0 +1,141 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+* {
+	/* Global variables */
+	--blue-1: #7AD7F0;
+	--blue-2: #92DFF3;
+	--blue-3: #B7E9F7;
+	--white-1: #F8F6F4;
+	--glass: #ffffff69;
+	--opaque-glass: #ffffffcc;
+	--unit: min(100vw, 100vh);
+
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	font-family: "Poppins", Courier, monospace;
+	font-size: 1.75vh;
+	scroll-behavior: smooth;
+	
+}
+
+a {
+	text-decoration: none;
+	color: black;
+}
+a:hover {
+	color: palevioletred;
+}
+
+body {
+	width: 100vw;
+	height: 100vh;
+	display: grid;
+	grid-template-columns: 3fr 7fr;
+	background:
+	linear-gradient(to right, #f5f5f5bf, transparent),
+	url(https://grainy-gradients.vercel.app/noise.svg);
+	background-color: #06845c;
+}
+/* Applies to elements that make use of grid system */
+.grid {
+	display: grid;
+	gap: 1rem;
+}
+
+.grid-item {
+	width: 100%;
+	height: 100%;
+	background-color: var(--glass);
+	border-radius: 1rem;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	transition: background-color 0.8s;
+}
+
+.grid-item:hover {
+	background-color: var(--opaque-glass);
+}
+
+.fill-width {
+	grid-column: 1 / -1;
+}
+
+.width-2 {
+	grid-column: span 2;
+}
+
+.width-3 {
+	grid-column: span 3;
+}
+
+.height-2 {
+	grid-row: span 2;
+}
+
+.height-3 {
+	grid-row: span 3;
+}
+
+/* About / nav elements */
+#about-container {
+	width: 100%;
+	padding: 20% 1rem;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+#about-grid {
+	border-radius: 2.2rem;
+	overflow: hidden;
+	width: 100%;
+	height: 100%;
+	grid-template-columns: repeat(auto-fit, minmax(30%, 1fr));
+	grid-template-rows: 2fr 1fr 1fr;
+}
+
+#name-item {
+	font-weight: 500;
+	font-size: 6rem;
+	letter-spacing: .5rem;
+	color: black;
+	text-align: center;
+}
+
+/* Content container elements */
+#content-container {
+	overflow-y: scroll;
+	display: flex;
+	justify-content: center;
+}
+
+#content-grid {
+	display: grid;
+	max-width: 63vw;
+	grid-auto-rows: 20vh;
+	grid-template-columns: repeat(auto-fit, minmax(calc(var(--unit)*0.5), 1fr));
+	padding: 1rem;
+	gap: 2rem;
+}
+
+/* Media Queries */
+@media (max-aspect-ratio: 4/3) {
+	* {
+		font-size: 1.5vh;
+	}
+	body {
+		background-color: orange;
+		display: block;
+	}
+
+	#about-container {
+		height: 100%;
+		padding: 1rem;
+	}
+	#content-grid {
+		max-width: 96%;
+	}
+}

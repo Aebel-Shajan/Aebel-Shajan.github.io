@@ -1,0 +1,98 @@
+/* Project-container elements and its children */
+.project-container {
+	display: grid;
+	grid-template-columns: 2fr 3fr;
+	overflow: hidden;
+}
+
+.project-image-container {
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+}
+
+.project-image {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	object-position: top left;
+}
+
+.project-content-container {
+	height: 100%;
+	width: 100%;
+	min-height: 0;
+	min-width: 0;
+	display: grid;
+	padding: 1rem;
+	grid-template-rows: auto auto 1fr 1fr 1fr;
+	grid-template-areas:
+		"t t t t"
+		"_ _ d d"
+		"p p p p"
+		"p p p p"
+		"l l l l"
+}
+
+.project-title {
+	grid-area: t;
+	overflow: hidden;
+	font-weight: 600;
+	font-size: 1rem;
+}
+
+.project-date {
+	grid-area: d;
+	overflow: hidden;
+	font-size: 0.7rem;
+}
+
+.project-description {
+	grid-area: p;
+	overflow: hidden;
+	font-size: 0.7rem;
+	height: 100%;
+	width: 100%;
+}
+
+.project-links {
+	grid-area: l;
+	overflow: hidden;
+	display: flex;
+	align-items: center;
+}
+
+.project-links>a>i {
+	font-size: 1.3rem;
+	padding: 0.3rem;
+	color: black;
+}
+
+/* Heading elements */
+.heading {
+	justify-content: space-evenly;
+	font-size: 5rem;
+	border: solid 0.3rem var(--opaque-glass);
+}
+
+#codepen > button{
+	width: 100%;
+	height: 100%;
+	font-size: inherit;
+	border: none;
+	background-color: transparent;
+}
+#codepen > button:hover {
+	color: var(--blue-1);
+	background-attachment: black;
+}
+
+#cv {
+	grid-row: span 2;
+}
+
+@media (max-aspect-ratio: 1) {
+	#cv {
+		grid-row: span 1;
+	}
+}

@@ -1,41 +1,82 @@
 [
-  {
-    "url": "https://colab.research.google.com/drive/1OAbeBDLGDGT8JBRl0X4B-FBsGbCPvMi9?usp=sharing",
-    "title": "Classification of Antimicrobial Peptides using Machine Learning",
+	{
+		"title": "Convolutional Neural Network",
+		"image": "assets/machine-learning-project.png",
     "date": "January 2023",
     "description": "Created a Grah Convolution Neural Network (GCNN) to classify antibiotic molecules based on their efficacy. Trained the model on a large dataset of 20,000 molecules using Python in Google Colab.",
     "skills": [
-      "Python",
+			"Python",
       "Tensorflow",
       "Google Colab",
       "Graph Convolutional Nueral Networks"
     ],
-    "image": "assets/project_images/gcn.png"
+		"links": {
+			"github": "https://github.com/Aebel-Shajan/Peptide_GCN",
+			"colab": "https://colab.research.google.com/drive/1OAbeBDLGDGT8JBRl0X4B-FBsGbCPvMi9?usp=sharing",
+			"pdf": "https://1drv.ms/b/s!Akd9HFmK4Wzizj-NOfHuNB06Yoyn?e=UGptnf"
+		} 
   },
   {
-    "url": "assets/pdfs/Pagerank_Project_Report.pdf",
-    "title": "Investigation Of The Pagerank Algorithm",
+		"title": "Investigation Of The Pagerank Algorithm",
+		"image": "assets/pagerank-project.png",
     "date": "February 2023",
-    "description": "Researched the mathematical fundamentals of Google's famous Pagerank algorithm. Recreated the algorithm using MATLAB software and investegated the significance of paramaters within the algorithm. Used data visualization and analysis in Python to convey the results.",
+    "description": "Researched the mathematical fundamentals of Google's famous Pagerank algorithm. Recreated the algorithm using MATLAB software.",
     "skills": [
-      "MATLAB",
+			"MATLAB",
       "Algorithms",
       "Data Visualization"
     ],
-    "image": "assets/project_images/manchester_4000_graph.png"
+		"links": {
+			"github":"https://github.com/Aebel-Shajan/pagerank-application",
+			"pdf": "https://1drv.ms/b/s!Akd9HFmK4Wzig6JnOsUC8VcItwvDIw?e=5LZed5"
+		} 
   },
   {
-    "url": "https://github.com/Aebel-Shajan/Quantum-Circuits",
-    "title": "Quantum Circuits C++ Project",
+		"title": "Quantum Circuits C++ Project",
+		"image": "assets/quantum-circuits-project.png",
     "date": "July 2023",
     "description": "Created a C++ program to simulate quantum circuits. The program can simulate the effects of quantum gates on qubits and can also simulate the effects of quantum entanglement.",
     "skills": [
-      "C++",
+			"C++",
       "Quantum Computing",
       "Object Oriented Programming",
       "Visual Studio Code"
     ],
-    "image": "assets/project_images/Quantum Computing.png"
-  }
+		"links": {
+			"github": "https://github.com/Aebel-Shajan/Quantum-Circuits",
+			"pdf": "https://1drv.ms/b/s!Akd9HFmK4Wzig6Jlq0y5H2-bTwrILg?e=akOh2a"
+		}
+  },
+	{
+		"title":"Subway Surfers Screen Reader Chrome Extension",
+		"image": "assets/subway-surfers-screen-reader.png",
+		"date": "January 2024",
+		"description": "Made a screen reader chrome extension which used mozilla/readability.js and the chrome text to speech api.",
+		"links": {
+			"chrome": "https://chromewebstore.google.com/detail/subway-surfers-screen-rea/jcijfneifjnhbgahlokgkmpcnocgpegd",
+			"youtube": "https://www.youtube.com/watch?v=JuJiM2TYbiw"
+		}
+	},
+	{
+		"title":"Youtube Multitasker Chrome Extension",
+		"image": "assets/youtube-multitasker.png",
+		"date": "December 2023",
+		"description": "Chrome extension to watch multiple videos at the same time in the side panel.",
+		"links": {
+			"chrome": "https://chromewebstore.google.com/detail/multiple-yt-vids-in-side/hmaalghckkjijjekbglkebnjhdcebojh",
+			"youtube": "https://youtu.be/Io0iaTg9Z5U"
+		}
+	},
+	{
+		"title": "FreeCodeCamp Sidepanel Extension",
+		"image": "assets/fcc-sidepanel.png",
+		"date": "December 2023",
+		"description": "Chrome extension to quickly access the contents of the FreeCodeCamp curriculum.",
+		"links": {
+			"github": "https://github.com/Aebel-Shajan/FreeCodeCamp-Contents-Chrome-Extension",
+			"chrome": "https://chromewebstore.google.com/detail/contents-panel-for-fcc/cmogdnmmkblhlbdbppfahmclekapmdjo", 
+			"youtube": "https://youtu.be/7N9cAhmy774"
+		}
+	}
 
 ]
