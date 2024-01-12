@@ -1,7 +1,7 @@
 /* Project-container elements and its children */
 .project-container {
 	display: grid;
-	grid-template-columns: 2fr 3fr;
+	grid-template-columns: 1fr 2fr;
 	overflow: hidden;
 }
 
@@ -25,11 +25,10 @@
 	min-width: 0;
 	display: grid;
 	padding: 1rem;
-	grid-template-rows: auto auto 1fr 1fr 1fr;
+	grid-template-rows: auto auto  3fr 1fr;
 	grid-template-areas:
 		"t t t t"
 		"_ _ d d"
-		"p p p p"
 		"p p p p"
 		"l l l l"
 }
@@ -50,7 +49,7 @@
 .project-description {
 	grid-area: p;
 	overflow: hidden;
-	font-size: 0.7rem;
+	font-size: 0.85rem;
 	height: 100%;
 	width: 100%;
 }
