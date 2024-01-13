@@ -24,7 +24,8 @@
 	min-height: 0;
 	min-width: 0;
 	display: grid;
-	padding: 1rem;
+	padding: 0.8rem;
+	row-gap: 0.2rem;
 	grid-template-rows: auto auto  3fr 1fr;
 	grid-template-areas:
 		"t t t t"
@@ -37,19 +38,19 @@
 	grid-area: t;
 	overflow: hidden;
 	font-weight: 600;
-	font-size: 1rem;
+	font-size: var(--large-text);
 }
 
 .project-date {
 	grid-area: d;
 	overflow: hidden;
-	font-size: 0.7rem;
+	font-size: var(--small-text);
 }
 
 .project-description {
 	grid-area: p;
 	overflow: hidden;
-	font-size: 0.85rem;
+	font-size: var(--small-text);
 	height: 100%;
 	width: 100%;
 }
@@ -62,7 +63,7 @@
 }
 
 .project-links>a>i {
-	font-size: 1.3rem;
+	font-size: var(--large-text);
 	padding: 0.3rem;
 	color: black;
 }
@@ -98,8 +99,22 @@
 	text-align: center;
 }
 #codepen-project-title {
-	font-size: 0.8rem;
+	font-size: var(--normal-text);
 	grid-area: d;
 	text-align: center;
 }
 
+/* Flex pills */
+.flex-pills {
+	list-style: none;
+	display: flex;
+	gap: 1rem;
+	flex-wrap: wrap;
+}
+.flex-pills > * {
+	font-size: var(--small-text);
+	background-color: black;
+	border-radius: 1rem;
+	color: white;
+	padding: 0.5rem;
+}
