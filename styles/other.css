@@ -38,7 +38,7 @@
 	grid-area: t;
 	overflow: hidden;
 	font-weight: 600;
-	font-size: var(--large-text);
+	font-size: var(--normal-text);
 }
 
 .project-date {
@@ -75,6 +75,7 @@
 	"b1 t t b2"
 	"b1 d d b2";
 	grid-auto-columns: 25%;
+	overflow: hidden;
 }
 #previous-codepen {
 	grid-area: b1;
@@ -90,8 +91,7 @@
 	background-color: transparent;
 }
 #previous-codepen:hover, #next-codepen:hover{
-	color: var(--blue-1);
-	background-attachment: black;
+	color: var(--active-color);
 }
 #codepen-title {
 	font-size: inherit;
@@ -116,5 +116,5 @@
 	background-color: black;
 	border-radius: 1rem;
 	color: white;
-	padding: 0.5rem;
+	padding: calc(0.5*var(--small-text));
 }

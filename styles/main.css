@@ -5,6 +5,7 @@
 	/* Global variables */
 	--glass: #ffffff8c;
 	--opaque-glass: #fffffff3;
+	--active-color: palevioletred;
 	--flex-grid-size: 20vh;
 	--flex-grid-gap: 1rem;
 
@@ -28,7 +29,7 @@ a {
 }
 
 a:hover {
-	color: palevioletred;
+	color: var(--active-color);
 }
 
 body {
@@ -39,7 +40,9 @@ body {
 	display: grid;
 	grid-template-columns: 3fr 7fr;
 
-	background:linear-gradient(to bottom,#48d5ba, #62bdc9);
+	background:
+	linear-gradient(to bottom,#48d5ba88, #62bdc988),
+	url(https://grainy-gradients.vercel.app/noise.svg);
 }
 
 /* Containers */
@@ -59,11 +62,12 @@ body {
 /* Media Queries */
 @media (max-aspect-ratio: 4/3) {
 	* {
-		--larger-text: 2.9rem;
-		--large-text: 1rem;
-		--normal-text: 0.8rem;
-		--small-text: 0.57rem;
-		font-size: var(--normal-text);
+
+		font-size: 1.5vh;
+		--larger-text: 4rem;
+		--large-text: 1.2rem;
+		--normal-text: 1rem;
+		--small-text: 0.8rem;
 	}
 	body {
 		height: fit-content;
@@ -75,6 +79,9 @@ body {
 		background-color: orange;
 	}
 
+	#about-container {
+		height: 100vh;
+	}
 	#content-container {
 		overflow-y: hidden;
 	}

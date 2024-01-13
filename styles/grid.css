@@ -92,5 +92,12 @@
 	width: 100%;
 	overflow: hidden;
 	
+	align-items: stretch;
+
 	border-radius: 2.2rem;
+}
+
+#name-item {
+	font-weight: 600;
+	letter-spacing: 1.2rem;
 }
