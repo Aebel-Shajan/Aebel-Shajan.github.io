@@ -1,8 +1,8 @@
 /* Project-container elements and its children */
 .project-container {
+	overflow: hidden;
 	display: grid;
 	grid-template-columns: 1fr 2fr;
-	overflow: hidden;
 }
 
 .project-image-container {
@@ -67,13 +67,7 @@
 	color: black;
 }
 
-/* Heading elements */
-.heading {
-	justify-content: space-evenly;
-	font-size: 5rem;
-	border: solid 0.3rem var(--opaque-glass);
-}
-
+/* codepen */
 #codepen {
 	display: grid;
 	grid-template-areas: 
@@ -109,13 +103,3 @@
 	text-align: center;
 }
 
-
-#cv {
-	grid-row: span 2;
-}
-
-@media (max-aspect-ratio: 1) {
-	#cv {
-		grid-row: span 1;
-	}
-}
