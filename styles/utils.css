@@ -74,17 +74,41 @@
 	border: solid 0.3rem var(--opaque-glass);
 }
 
-#codepen > button{
+#codepen {
+	display: grid;
+	grid-template-areas: 
+	"b1 t t b2"
+	"b1 d d b2";
+	grid-auto-columns: 25%;
+}
+#previous-codepen {
+	grid-area: b1;
+}
+#next-codepen {
+	grid-area: b2;
+}
+#previous-codepen, #next-codepen{
 	width: 100%;
 	height: 100%;
 	font-size: inherit;
 	border: none;
 	background-color: transparent;
 }
-#codepen > button:hover {
+#previous-codepen:hover, #next-codepen:hover{
 	color: var(--blue-1);
 	background-attachment: black;
 }
+#codepen-title {
+	font-size: inherit;
+	grid-area: t;
+	text-align: center;
+}
+#codepen-project-title {
+	font-size: 0.8rem;
+	grid-area: d;
+	text-align: center;
+}
+
 
 #cv {
 	grid-row: span 2;

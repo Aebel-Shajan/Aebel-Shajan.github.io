@@ -37,45 +37,24 @@ projects.forEach(project => {
 
 // Handling code pen section logic
 let codepenIndex = 0;
+let visual = () => {
+	let output = "-".repeat(codepenProjects.length);
+	output = output.split("");
+	output[codepenIndex] = "0";
+	return "\n" + output.join("");
+}
+document.querySelector("#codepen-project-title").innerText = codepenProjects[codepenIndex]["name"] + visual();
+document.querySelector("#codepen-iframe").src = codepenProjects[codepenIndex]["link"];
 document.querySelector("#next-codepen").addEventListener("click", () => {
 	codepenIndex = (codepenIndex + 1) % codepenProjects.length;
 	console.log("codepenIndex: ", codepenIndex);
 	document.querySelector("#codepen-iframe").src = codepenProjects[codepenIndex]["link"];
+	document.querySelector("#codepen-project-title").innerText = codepenProjects[codepenIndex]["name"] + visual();
 })
 document.querySelector("#previous-codepen").addEventListener("click", () => {
 	codepenIndex -= 1;
 	if (codepenIndex < 0) { codepenIndex += codepenProjects.length }
 	console.log("codepenIndex: ", codepenIndex);
 	document.querySelector("#codepen-iframe").src = codepenProjects[codepenIndex]["link"];
+	document.querySelector("#codepen-project-title").innerText = codepenProjects[codepenIndex]["name"] + visual();
 })
-
-// Animating letters
-// https://web.dev/articles/building/split-text-animations#:~:text=Text%20letters%2C%20words%2C%20lines%2C,needs%20to%20be%20an%20element.
-// const span = (text, index) => {
-// 	const node = document.createElement('span')
-// 	node.textContent = text
-// 	node.style.setProperty('--index', index)
-// 	return node
-// }
-// const byLetter = text => [...text].map(span);
-// const splitTargets = document.querySelectorAll('[split-by]');
-
-// const { matches: motionOK } = window.matchMedia(
-// 	'(prefers-reduced-motion: no-preference)'
-// )
-// if (motionOK) {
-// 	const splitTargets = document.querySelectorAll('[split-by]')
-
-// 	splitTargets.forEach(node => {
-// 		const type = node.getAttribute('split-by')
-// 		let nodes = null
-
-// 		if (type === 'letter')
-// 			nodes = byLetter(node.innerText)
-// 		else if (type === 'word')
-// 			nodes = byWord(node.innerText)
-
-// 		if (nodes)
-// 			node.firstChild.replaceWith(...nodes)
-// 	})
-// } 

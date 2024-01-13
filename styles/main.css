@@ -17,7 +17,6 @@
 	font-family: "Poppins", Courier, monospace;
 	font-size: 1.75vh;
 	scroll-behavior: smooth;
-
 }
 
 a {
@@ -35,9 +34,8 @@ body {
 	display: grid;
 	grid-template-columns: 3fr 7fr;
 	background:
-	linear-gradient(to bottom, rgba(255, 255, 255, 0.386), transparent);
-	/* url(https://grainy-gradients.vercel.app/noise.svg); */
-	background-color: #06845c;
+	linear-gradient(to bottom,#48d5ba,   #62bdc9);
+	/* //background-color: #06845c; */
 }
 
 /* Applies to elements that make use of grid system */
@@ -55,7 +53,7 @@ body {
 	align-items: center;
 	justify-content: center;
 	transition: background-color 0.8s;
-	font-size: 150%;
+	font-size: 120%;
 }
 
 .grid-item:hover {
@@ -98,7 +96,7 @@ body {
 	width: 100%;
 	height: 100%;
 	grid-template-columns: repeat(auto-fit, minmax(30%, 1fr));
-	grid-template-rows: 2fr 1fr 1fr;
+	grid-auto-rows: 1fr;
 }
 
 #name-item {
@@ -107,6 +105,7 @@ body {
 	letter-spacing: .5rem;
 	color: black;
 	text-align: center;
+	grid-row: span 2;
 }
 
 /* Content container elements */
@@ -147,14 +146,3 @@ body {
 		max-width: 96%;
 	}
 }
-
-
-/* span {
-	font-size: inherit;
-	transition: transform .5s ease;
-	cursor: pointer;
-}
-span:hover {
-	transform: scale(1.75);
-	transform-origin: center;
-} */
