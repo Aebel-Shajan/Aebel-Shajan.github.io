@@ -1,141 +1,88 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+  @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 * {
 	/* Global variables */
-	--blue-1: #7AD7F0;
-	--blue-2: #92DFF3;
-	--blue-3: #B7E9F7;
-	--white-1: #F8F6F4;
-	--glass: #ffffff69;
-	--opaque-glass: #ffffffcc;
-	--unit: min(100vw, 100vh);
+	--glass: #ffffff8c;
+	--opaque-glass: #fffffff3;
+	--active-color: palevioletred;
+	--flex-grid-size: 20vh;
+	--flex-grid-gap: 1rem;
+
+	--larger-text: 4rem;
+	--large-text: 1.2rem;
+	--normal-text: 1rem;
+	--small-text: 0.8rem;
 
 	box-sizing: border-box;
-	margin: 0;
 	padding: 0;
+	margin: 0;
+
+	font-size: var(--normal-text);
 	font-family: "Poppins", Courier, monospace;
-	font-size: 1.75vh;
 	scroll-behavior: smooth;
-	
 }
 
 a {
 	text-decoration: none;
 	color: black;
 }
+
 a:hover {
-	color: palevioletred;
+	color: var(--active-color);
 }
 
 body {
 	width: 100vw;
 	height: 100vh;
+	overflow: hidden;
+	
 	display: grid;
 	grid-template-columns: 3fr 7fr;
+
 	background:
-	linear-gradient(to right, #f5f5f5bf, transparent),
+	linear-gradient(to bottom,#48d5ba88, #62bdc988),
 	url(https://grainy-gradients.vercel.app/noise.svg);
-	background-color: #06845c;
-}
-/* Applies to elements that make use of grid system */
-.grid {
-	display: grid;
-	gap: 1rem;
 }
 
-.grid-item {
-	width: 100%;
-	height: 100%;
-	background-color: var(--glass);
-	border-radius: 1rem;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	transition: background-color 0.8s;
-}
-
-.grid-item:hover {
-	background-color: var(--opaque-glass);
-}
-
-.fill-width {
-	grid-column: 1 / -1;
-}
-
-.width-2 {
-	grid-column: span 2;
-}
-
-.width-3 {
-	grid-column: span 3;
-}
-
-.height-2 {
-	grid-row: span 2;
-}
-
-.height-3 {
-	grid-row: span 3;
-}
-
-/* About / nav elements */
-#about-container {
-	width: 100%;
-	padding: 20% 1rem;
-	height: 100%;
+/* Containers */
+.container {
 	display: flex;
 	justify-content: center;
 	align-items: center;
 }
 
-#about-grid {
-	border-radius: 2.2rem;
-	overflow: hidden;
-	width: 100%;
-	height: 100%;
-	grid-template-columns: repeat(auto-fit, minmax(30%, 1fr));
-	grid-template-rows: 2fr 1fr 1fr;
-}
-
-#name-item {
-	font-weight: 500;
-	font-size: 6rem;
-	letter-spacing: .5rem;
-	color: black;
-	text-align: center;
-}
-
-/* Content container elements */
 #content-container {
+	padding-left: 3%;
+	padding-right: 3%;
 	overflow-y: scroll;
-	display: flex;
-	justify-content: center;
-}
-
-#content-grid {
-	display: grid;
-	max-width: 63vw;
-	grid-auto-rows: 20vh;
-	grid-template-columns: repeat(auto-fit, minmax(calc(var(--unit)*0.5), 1fr));
-	padding: 1rem;
-	gap: 2rem;
+	align-items: unset;
 }
 
 /* Media Queries */
 @media (max-aspect-ratio: 4/3) {
 	* {
+
 		font-size: 1.5vh;
+		--larger-text: 4rem;
+		--large-text: 1.2rem;
+		--normal-text: 1rem;
+		--small-text: 0.8rem;
 	}
 	body {
+		height: fit-content;
+		overflow-x: hidden;
+		overflow-y: scroll;
+		
+		display: unset;
+
 		background-color: orange;
-		display: block;
 	}
 
 	#about-container {
-		height: 100%;
-		padding: 1rem;
+		height: 100vh;
 	}
-	#content-grid {
-		max-width: 96%;
+	#content-container {
+		overflow-y: hidden;
 	}
 }

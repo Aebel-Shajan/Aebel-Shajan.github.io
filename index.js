@@ -1,6 +1,8 @@
 import projects from './projects.json' assert {type: "json"};
 import codepenProjects from './codepen-projects.json' assert {type: "json"};
 
+
+// Loading projects 
 console.log(projects);
 projects.forEach(project => {
 	let projectContainer = document.querySelector("template").content.querySelector(".project-container").cloneNode(true);
@@ -14,7 +16,7 @@ projects.forEach(project => {
 		linkElement.target = "_blank";
 		let linkIcon = document.createElement("i");
 		let iconName = ""
-		switch(linkName){
+		switch (linkName) {
 			case "github":
 			case "chrome":
 			case "youtube":
@@ -33,15 +35,26 @@ projects.forEach(project => {
 	document.querySelector("#content-grid").appendChild(projectContainer);
 });
 
+// Handling code pen section logic
 let codepenIndex = 0;
+let visual = () => {
+	let output = "-".repeat(codepenProjects.length);
+	output = output.split("");
+	output[codepenIndex] = "0";
+	return "\n" + output.join("");
+}
+document.querySelector("#codepen-project-title").innerText = codepenProjects[codepenIndex]["name"] + visual();
+document.querySelector("#codepen-iframe").src = codepenProjects[codepenIndex]["link"];
 document.querySelector("#next-codepen").addEventListener("click", () => {
-	codepenIndex = (codepenIndex + 1 ) % codepenProjects.length;
+	codepenIndex = (codepenIndex + 1) % codepenProjects.length;
 	console.log("codepenIndex: ", codepenIndex);
 	document.querySelector("#codepen-iframe").src = codepenProjects[codepenIndex]["link"];
+	document.querySelector("#codepen-project-title").innerText = codepenProjects[codepenIndex]["name"] + visual();
 })
 document.querySelector("#previous-codepen").addEventListener("click", () => {
 	codepenIndex -= 1;
-	if (codepenIndex < 0) {codepenIndex += codepenProjects.length}
+	if (codepenIndex < 0) { codepenIndex += codepenProjects.length }
 	console.log("codepenIndex: ", codepenIndex);
 	document.querySelector("#codepen-iframe").src = codepenProjects[codepenIndex]["link"];
+	document.querySelector("#codepen-project-title").innerText = codepenProjects[codepenIndex]["name"] + visual();
 })
