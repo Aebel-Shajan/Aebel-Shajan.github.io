@@ -10,7 +10,7 @@ List the key features of your website. For example:
 
 - Responsive design
 - Project section with project details
-- Navbar and sidebar
+- Codepen section with iframes of codepen projects
 - CV section which showcases my CV in a pdf viewer
 
 
