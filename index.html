@@ -3,10 +3,9 @@
 
 <head>
 	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
 	<link rel="stylesheet" href="styles/index.css">
 	<link rel="stylesheet" href="styles/projects.css">
-	<link rel="stylesheet" href="styles/specific.css">
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
 		integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
 	<link href="https://fonts.googleapis.com/css?family=Poppins:200i,300,400&display=swap" rel="stylesheet">
@@ -32,11 +31,11 @@
 			<a id="name-item" class="heading centred" href="#about">
 				Aebel Shajan
 			</a>
-			<div class="container">
+			<div id="nav-container" class="container">
 				<a class="centred" href="#projects">
 					Projects
 				</a>
-				<a class="centred" href="#codepen">
+				<a class="centred" href="#codepen-heading">
 					CodePen
 				</a>
 				<a class="centred" href="#cv">
@@ -55,7 +54,7 @@
 	</div>
 
 
-	<div id="content-container" class="container">
+	<div id="content-container">
 		<div class="section container">
 			<div id="about" class="heading">
 				About
@@ -114,7 +113,7 @@
 		</div>
 
 		<div class="section container">
-			<div id="codepen" class="container heading">
+			<div id="codepen-heading" class="container heading">
 				<button type="button" id="previous-codepen">&lt;</button>
 				<div id="codepen-project-title" class="centred-text"></div>
 				<button type="button" id="next-codepen">&gt;</button>

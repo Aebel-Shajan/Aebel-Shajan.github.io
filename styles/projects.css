@@ -1,29 +1,32 @@
 .project-container {
-    width: 45vh;
-    height: 45vh;
+    width: 40vh;
+    min-height: 40vh;
     padding: 0;
     overflow: hidden;
 }
 
 .project-image-container {
     width: 100%;
-    height: 20vh;
+    height: 25vh;
 }
 .project-image {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    object-position: top left;
 }
 
 
 .project-content-container {
-    height: calc(100% - 20vh);
+    height: calc(100% - 25vh);
     display: grid;
     grid-template-rows: 1fr 1fr 3fr 1fr;
     gap: 0.1rem;
     padding: 1rem;
 }
-
+.project-title {
+    font-size: medium;
+}
 .project-date {
     display: flex;
     justify-content: flex-end;
@@ -34,8 +37,11 @@
     text-overflow: ellipsis;
 }
 .project-links {
-    font-size: xx-large;
     display: flex;
     justify-content: flex-end;
     gap: 1rem;
+}
+
+.project-links > *  > * {
+    font-size: xx-large;
 }

@@ -38,9 +38,9 @@ projects.forEach(project => {
 // Handling code pen section logic
 let codepenIndex = 0;
 let visual = () => {
-	let output = "-".repeat(codepenProjects.length);
+	let output = "⎻".repeat(codepenProjects.length);
 	output = output.split("");
-	output[codepenIndex] = "0";
+	output[codepenIndex] = "⌾";
 	return "\n" + output.join("");
 }
 document.querySelector("#codepen-project-title").innerText = codepenProjects[codepenIndex]["name"] + visual();
