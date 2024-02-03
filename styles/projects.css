@@ -1,6 +1,8 @@
 .project-container {
     width: 45vh;
     height: 45vh;
+    padding: 0;
+    overflow: hidden;
 }
 
 .project-image-container {
@@ -16,9 +18,10 @@
 
 .project-content-container {
     height: calc(100% - 20vh);
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-rows: 1fr 1fr 3fr 1fr;
     gap: 0.1rem;
+    padding: 1rem;
 }
 
 .project-date {
@@ -28,6 +31,7 @@
 }
 .project-description {
     font-size: small;
+    text-overflow: ellipsis;
 }
 .project-links {
     font-size: xx-large;
