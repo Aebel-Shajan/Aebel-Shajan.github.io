@@ -1,5 +1,5 @@
 .project-container {
-    width: 40vh;
+    width: 45vh;
     min-height: 40vh;
     padding: 0;
     overflow: hidden;
@@ -20,7 +20,7 @@
 .project-content-container {
     height: calc(100% - 25vh);
     display: grid;
-    grid-template-rows: 1fr 1fr 3fr 1fr;
+    grid-template-rows: 1fr 1fr 2.5fr 1fr;
     gap: 0.1rem;
     padding: 1rem;
 }
