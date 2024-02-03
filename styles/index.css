@@ -1,6 +1,18 @@
 * {
     box-sizing: border-box;
     margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+}
+
+body {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    height: 100vh;
+}
+
+#content-container {
+    overflow: scroll;
 }
 
 .container {
@@ -9,14 +21,15 @@
     gap: 1rem;
     padding: 1rem;
     justify-content: center;
+    align-items: stretch;
 }
 
 .container > * {
     border: solid black 1px;
     border-radius: 1rem;
     padding: 1rem;
-    min-width: 20vh;
-    min-height: 20vh;
+    flex-grow: 1;
+    min-width: 15vh;
 }
 
 .heading {
@@ -29,7 +42,8 @@
 
 .viewbox {
     width: 100%;
-    height: calc(100vw * 0.33);
+    height: calc(100vw * 0.4);
+    padding: 0;
 }
 
 .centred {
@@ -42,7 +56,35 @@
     text-align: center;
 }
 
-.spaced-between {
+.no-border {
+    border: none;
+}
+
+.section {
+    border: none;
+    min-height: 100vh;
+}
+
+.pill-container {
+    display: flex;
+    flex-direction: column;
     justify-content: space-between;
 }
 
+.flex-pills {
+    display: flex;
+    list-style: none;
+    flex-wrap: wrap;
+    align-self: stretch;
+    gap: 1rem;
+}
+.flex-pills > * {
+    border: 1px solid black;
+    border-radius: 1rem;
+    padding: 0.5rem;
+}
+
+#about-text {
+    min-height: 40vh;
+    font-size: large;
+}

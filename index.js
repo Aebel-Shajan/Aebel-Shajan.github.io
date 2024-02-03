@@ -32,7 +32,7 @@ projects.forEach(project => {
 		linkElement.appendChild(linkIcon);
 		projectContainer.querySelector(".project-links").appendChild(linkElement);
 	}
-	document.querySelector("#content-container").appendChild(projectContainer);
+	document.querySelector("#projects-container").appendChild(projectContainer);
 });
 
 // Handling code pen section logic

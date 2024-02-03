@@ -6,6 +6,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	<link rel="stylesheet" href="styles/index.css">
 	<link rel="stylesheet" href="styles/projects.css">
+	<link rel="stylesheet" href="styles/specific.css">
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
 		integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
 	<link href="https://fonts.googleapis.com/css?family=Poppins:200i,300,400&display=swap" rel="stylesheet">
@@ -28,104 +29,112 @@
 	</template>
 
 	<div class="container">
-		<a id="name-item" class="heading" href="#about">
-			Aebel Shajan
-		</a>
-		<a class="centred" href="#codepen">
-			CodePen
-		</a>
-		<a class="centred" href="#cv">
-			CV
-		</a>
-		<a class="centred" href="#projects">
-			Projects
-		</a>
-		<a class="centred" target="_blank" href="https://www.linkedin.com/in/aebel-shajan/">
-			LinkedIn
-		</a>
-		<a class="centred" target="_blank" href="https://github.com/Aebel-Shajan">
-			Github
-		</a>
-		<a class="centred" target="_blank" href="https://www.hackerrank.com/profile/aebelshajan_work">
-			HackerRank
-		</a>
+			<a id="name-item" class="heading centred" href="#about">
+				Aebel Shajan
+			</a>
+			<div class="container">
+				<a class="centred" href="#codepen">
+					CodePen
+				</a>
+				<a class="centred" href="#cv">
+					CV
+				</a>
+				<a class="centred" href="#projects">
+					Projects
+				</a>
+				<a class="centred" target="_blank" href="https://www.linkedin.com/in/aebel-shajan/">
+					LinkedIn
+				</a>
+				<a class="centred" target="_blank" href="https://github.com/Aebel-Shajan">
+					Github
+				</a>
+				<a class="centred" target="_blank" href="https://www.hackerrank.com/profile/aebelshajan_work">
+					HackerRank
+				</a>
+			</div>
 	</div>
 
 
 	<div id="content-container" class="container">
-
-		<div id="about" class="heading">
-			About
-		</div>
-		<div class="centred">
-			<div class="centred-text">
-				<p>Helloo 🙋‍♂️. My name's Aebel (pronounced ay-bl). </p>
-				<br>
-				<p>
-					<i>
-						I'm a Maths & Physics Masters graduate / Web dev / game dev / machine learning enthusiast.
-					</i>
-				</p>
-
-				<br>
-				<p>
-					I love all things programming aswell as working on projects I find
-					interesting. I'm currently looking for a job, contact me through my email.
-				</p>
+		<div class="section container">
+			<div id="about" class="heading">
+				About
+			</div>
+			<div class="centred" id="about-text">
+				<div class="centred-text">
+					<p>Helloo 🙋‍♂️. My name's Aebel (pronounced ay-bl). </p>
+					<br>
+					<p>
+						<i>
+							I'm a Maths & Physics Masters graduate / Web dev / game dev / machine learning enthusiast.
+						</i>
+					</p>
+					<br>
+					<p>
+						I love all things programming aswell as working on projects I find
+						interesting. I'm currently looking for a job, contact me through my email.
+					</p>
+				</div>
 			</div>
 
+			<div class="pill-container">
+				Languages
+				<ul class="flex-pills">
+					<li>Python</li>
+					<li>C++</li>
+					<li>JavaScript</li>
+					<li>Java</li>
+				</ul>
+			</div>
+			<div class="pill-container">
+				Tools
+				<ul class="flex-pills">
+					<li>VS Code</li>
+					<li>Git</li>
+					<li>Godot</li>
+					<li>Latex</li>
+					<li>Bash</li>
+				</ul>
+			</div>
+			<div class="pill-container">
+				Libraries
+				<ul class="flex-pills">
+					<li>React</li>
+					<li>Redux</li>
+					<li>Chrome extension api</li>
+					<li>Tensorflow</li>
+				</ul>
+			</div>
 		</div>
 
-		<div class="text-item">
-			Languages
-			<ul class="flex-pills">
-				<li>Python</li>
-				<li>C++</li>
-				<li>JavaScript</li>
-				<li>Java</li>
-			</ul>
-		</div>
-		<div class="text-item">
-			Tools
-			<ul class="flex-pills">
-				<li>VS Code</li>
-				<li>Git</li>
-				<li>Godot</li>
-				<li>Latex</li>
-				<li>Bash</li>
-			</ul>
-		</div>
-		<div class="text-item">
-			Libraries
-			<ul class="flex-pills">
-				<li>React</li>
-				<li>Redux</li>
-				<li>Chrome extension api</li>
-				<li>Tensorflow</li>
-			</ul>
+		<div class="section container" id="projects-container">
+			<div id="projects" class="heading">
+				Projects
+			</div>
 		</div>
 
-
-		<div id="codepen" class="heading container spaced-between">
-			<button type="button" id="previous-codepen">&lt;</button>
-			<div id="codepen-project-title"></div>
-			<button type="button" id="next-codepen">&gt;</button>
+		<div class="section container">
+			<div id="codepen" class="container heading">
+				<button type="button" id="previous-codepen">&lt;</button>
+				<div id="codepen-project-title" class="centred-text"></div>
+				<button type="button" id="next-codepen">&gt;</button>
+			</div>
+			<iframe id="codepen-iframe" class="viewbox"
+				src="https://codepen.io/aebel-shajan/embed/OJdeNVx?default-tab=result" frameborder="no" loading="lazy"
+				allowtransparency="true" allowfullscreen="true">
+				See the Pen <a href="https://codepen.io/aebel-shajan/pen/BaMGQGR">
+					Random Quote Machine</a> by Aebel (<a href="https://codepen.io/aebel-shajan">@aebel-shajan</a>)
+				on <a href="https://codepen.io">CodePen</a>.
+			</iframe>
 		</div>
-		<iframe id="codepen-iframe" class="viewbox" src="https://codepen.io/aebel-shajan/embed/OJdeNVx?default-tab=result"
-			frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
-			See the Pen <a href="https://codepen.io/aebel-shajan/pen/BaMGQGR">
-				Random Quote Machine</a> by Aebel (<a href="https://codepen.io/aebel-shajan">@aebel-shajan</a>)
-			on <a href="https://codepen.io">CodePen</a>.
-		</iframe>
 
-		<a id="cv" class="heading" href="assets/Aebel_s_CV_Tech.pdf" download="Aebel_s_CV.pdf">
-			CV
-		</a>
-		<embed class="viewbox" src="assets/Aebel_s_CV_Tech.pdf" type="application/pdf" width="100%" height="100%" />
-
-		<div id="projects" class="heading">
-			Projects
+		<div class="section container">
+			<a id="cv" class="heading" href="assets/Aebel_s_CV_Tech.pdf" download="Aebel_s_CV.pdf">
+				CV
+			</a>
+			<embed class="viewbox" src="assets/Aebel_s_CV_Tech.pdf" type="application/pdf" width="100%" height="100%" />
 		</div>
+
 
 	</div>
 
