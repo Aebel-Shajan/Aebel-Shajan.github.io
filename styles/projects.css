@@ -1,0 +1,36 @@
+.project-container {
+    width: 50vh;
+}
+
+.project-image-container {
+    width: 100%;
+    height: 20vh;
+}
+.project-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+.project-content-container {
+    height: calc(100% - 20vh);
+    display: flex;
+    flex-direction: column;
+    gap: 0.1rem;
+}
+
+.project-date {
+    display: flex;
+    justify-content: flex-end;
+    font-size: small;
+}
+.project-description {
+    font-size: small;
+}
+.project-links {
+    font-size: xx-large;
+    display: flex;
+    justify-content: flex-end;
+    gap: 1rem;
+}
