@@ -77,6 +77,16 @@
 			"chrome": "https://chromewebstore.google.com/detail/contents-panel-for-fcc/cmogdnmmkblhlbdbppfahmclekapmdjo", 
 			"youtube": "https://youtu.be/7N9cAhmy774"
 		}
+	},
+	{
+		"title": "Driftin Deliveries",
+		"image": "assets/driftin-deliveries.png",
+		"date": "February 2024",
+		"description": "3d driving game made using Three.js. Deployed using Vercel.",
+		"links": {
+			"link": "https://driftin-deliveries.vercel.app/",
+			"github": "https://github.com/Aebel-Shajan/Driftin-Deliveries"
+		}
 	}
 
 ]
