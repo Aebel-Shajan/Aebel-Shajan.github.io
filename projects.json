@@ -87,6 +87,16 @@
 			"link": "https://driftin-deliveries.vercel.app/",
 			"github": "https://github.com/Aebel-Shajan/Driftin-Deliveries"
 		}
+	},
+	{
+		"title": "Rocket League Clone",
+		"image": "assets/wocket-weague.png",
+		"date": "March 2024?",
+		"description": "My attempt at remaking the core physics of Rocket League. Made using Three.js and Cannon-es. Deployed with Vercel.",
+		"links": {
+			"link": "https://wocket-weague.vercel.app/",
+			"github": "https://github.com/Aebel-Shajan/Wocket-Weague"
+		}
 	}
 
 ]
