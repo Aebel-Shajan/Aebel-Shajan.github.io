@@ -1,0 +1,38 @@
+section {
+  display: grid;
+  grid-template-columns: 3fr 10rem;
+}
+.title  {
+  background: linear-gradient(90deg, var(--primary), #38883C);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  width: fit-content;
+}
+
+h1 {
+  font-size: 5rem;
+}
+
+p {
+  font-size: 2rem;
+}
+
+.col1 {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.col2 {
+  background: linear-gradient(var(--primary), #183339);
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.col2 > a> * {
+  height: 5rem;
+  width: 100%
+}
