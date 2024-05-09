@@ -5,10 +5,10 @@ import { FaGithub, FaLinkedin, FaHackerrank} from "react-icons/fa";
 const Hero = () => {
 
   return (
-    <section id="me">
+    <section id="me" className={style.heroSection}>
       <div className={style.col1}>
-        <div className={style.title}>
-          <h1>
+        <div className={style.titleDiv}>
+          <h1 className={style.title}>
             Aebel Shajan
           </h1>
           <p>

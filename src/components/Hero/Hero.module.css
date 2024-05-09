@@ -1,20 +1,16 @@
-section {
+.heroSection {
   display: grid;
   grid-template-columns: 3fr 10rem;
+
 }
-.title  {
+.titleDiv {
   background: linear-gradient(90deg, var(--primary), #38883C);
   background-clip: text;
   -webkit-text-fill-color: transparent;
   width: fit-content;
 }
-
-h1 {
-  font-size: 5rem;
-}
-
-p {
-  font-size: 2rem;
+.title {
+  font-size: 8rem;
 }
 
 .col1 {
