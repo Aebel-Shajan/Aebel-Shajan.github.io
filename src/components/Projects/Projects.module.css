@@ -1,0 +1,10 @@
+.section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  
+}
+
+.title {
+  font-size: 4rem;
+}
