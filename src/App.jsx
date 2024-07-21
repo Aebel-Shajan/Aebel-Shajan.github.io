@@ -1,10 +1,12 @@
 import './App.css'
+import Navbar from './components/Navbar/Navbar'
 
 function App() {
   return (
-    <>
-    Aebel Shajan
-    </>
+    <div className='app'>
+      <Navbar />
+      Aebel Shajan
+    </div>
   )
 }
 
