@@ -1,0 +1,33 @@
+#about {
+    width: 50rem;
+    height: 30rem;
+    padding: 1rem;
+
+
+    display: grid;
+    grid-template-areas: 
+            "a a a"
+            "b c c"
+            "b c c";
+}
+#about {
+    width: 50rem;
+    height: 30rem;
+    padding: 1.5rem;
+
+    display: grid;
+    grid-template-areas: 
+            "a a b"
+            "a a b"
+            "c c c";
+    gap: 1rem;
+}
+#hello {
+    grid-area: a;
+}
+#head {
+    grid-area: b;
+}
+#socials {
+    grid-area: c;
+}
