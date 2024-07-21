@@ -1,10 +1,6 @@
-.navbar {
+#navbar {
     width: 40rem;
     height: 5rem;
-
-    border: solid gainsboro 1px;
-    border-radius: 2rem;
-    overflow: hidden;
 
     display: flex;
     justify-content: space-evenly;
