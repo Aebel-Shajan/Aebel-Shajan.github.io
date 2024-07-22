@@ -1,7 +1,8 @@
 import './Card.css';
 
-const Card = ({ children, ...props }) => {
-  return <div className="card" {...props}>{children}</div>;
+const Card = ({ children, className, ...props }) => {
+  const combinedClassName = `card ${className || ''}`.trim();
+  return <div className={combinedClassName} {...props}>{children}</div>;
 };
 
 export default Card;
