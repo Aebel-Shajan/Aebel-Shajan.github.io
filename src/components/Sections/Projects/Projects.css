@@ -41,3 +41,12 @@ button:hover {
     background-color:slategray;
     color: white;
 }
+
+#project-cards {
+    width: 100%;
+
+    display: flex;
+    justify-content: space-between;
+    gap: 1.5rem;
+    flex-flow: wrap;
+}

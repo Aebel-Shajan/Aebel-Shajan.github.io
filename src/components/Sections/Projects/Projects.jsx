@@ -47,12 +47,8 @@ const Projects = () => {
             </Card>
             <div id="project-cards">
                 {
-                    projectRepos.map(project => {
-                        return (
-                            <Card>
-                                {project.name}
-                            </Card>
-                        )
+                    projectRepos.map(projectData => {
+                        return <ProjectCard projectData={projectData} />
                     })
                 }
             </div>
