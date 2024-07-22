@@ -1,7 +1,7 @@
 import './App.css'
-import Navbar from './components/Navbar/Navbar'
-import About from './components/Sections/About/About'
-import Projects from './components/Sections/Projects/Projects'
+import Navbar from '@/components/Navbar/Navbar'
+import About from '@/components/Sections/About/About'
+import Projects from '@/components/Sections/Projects/Projects'
 
 function App() {
   return (

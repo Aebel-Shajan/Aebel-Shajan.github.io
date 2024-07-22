@@ -1,6 +1,7 @@
-import Card from "../../Card/Card";
+import Card from "@/components/Card/Card.jsx"
+import ProjectCard from "./ProjectCard/ProjectCard";
 import "./Projects.css";
-import projectLinks from "./../../../assets/data/projects.json"
+import projectLinks from "@/assets/data/projects.json";
 import { useEffect, useState } from "react";
 
 
