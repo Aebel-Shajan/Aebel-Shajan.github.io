@@ -10,38 +10,6 @@
     
     font-size: larger;
 }
-#projects-form {
-    height: 3rem;
-    
-    overflow: hidden;
-}
-#projects-form > form {
-    width: 100%;
-    height: 100%;
-    
-    display: flex;
-}
-input {
-    padding: 1rem;
-
-    border: 1px white solid;
-    
-    flex-grow: 1;
-}
-input:focus {
-    outline: none;
-}
-button {
-    width: 30%;
-
-    background-color: gainsboro;
-    border: none;
-}
-button:hover {
-    background-color:slategray;
-    color: white;
-}
-
 #project-cards {
     width: 100%;
 

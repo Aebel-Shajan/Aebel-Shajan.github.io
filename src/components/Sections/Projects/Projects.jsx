@@ -3,11 +3,13 @@ import ProjectCard from "./ProjectCard/ProjectCard";
 import "./Projects.css";
 import projectLinks from "@/assets/data/projects.json";
 import { useEffect, useState } from "react";
+import SearchForm from "./SearchForm/SearchForm";
 
 
 
 const Projects = () => {
     const [projectRepos, setProjectRepos] = useState([])
+    const [searchTerm, setSearchTerm] = useState("")
 
     const getProjectRepos = async (githubLinks) => {
         const response = await fetch("https://api.github.com/users/aebel-shajan/repos?per_page=100");
@@ -31,23 +33,17 @@ const Projects = () => {
             <Card id="projects-title">
                 <h1>Projects</h1>
             </Card>
-            <Card id="projects-form">
-                <form action="/search" method="GET">
-                    <input 
-                        type="text" 
-                        name="query" 
-                        placeholder="Search..." 
-                        className="search-input" />
-                    <button 
-                        type="submit" 
-                        className="search-button">
-                        Search
-                    </button>
-                </form>
-            </Card>
+            <SearchForm setSearchTerm={setSearchTerm} searchTerm={searchTerm}/>
             <div id="project-cards">
                 {
-                    projectRepos.map(projectData => {
+                    projectRepos
+                    .filter(projectData => {
+                        if (searchTerm === "") {
+                            return true
+                        }
+                        return projectData["name"].toLowerCase().includes(searchTerm.toLowerCase())
+                    })
+                    .map(projectData => {
                         return <ProjectCard projectData={projectData} />
                     })
                 }
