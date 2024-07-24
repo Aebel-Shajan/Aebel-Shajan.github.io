@@ -1,0 +1,47 @@
+#contact {
+    padding-bottom: 10rem;
+
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+#contact-title {
+    padding: 2rem;
+    
+    font-size: larger;
+}
+#contact-card {
+    width: 100%;
+    height: 20rem;
+    padding: 1rem;
+}
+#contact-form {
+    width: 100%;
+    height: 100%;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 3fr 1fr;
+    grid-template-areas:
+        "a b"
+        "c c"
+        "d d";
+    gap: 1rem;
+}
+#contact-form > * {
+    border-radius: 0.5rem;
+    padding: 1rem;
+}
+#contact-name {
+    grid-area: a;
+}
+#contact-email {
+    grid-area: b;
+}
+#contact-message {
+    grid-area: c;
+    resize: none;
+}
+#contact-submit {
+    grid-area: d
+}
