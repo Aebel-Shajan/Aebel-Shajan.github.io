@@ -1,6 +1,10 @@
 #navbar {
     width: 40rem;
     height: 5rem;
+    position: fixed;
+    top: 1rem;
+
+    z-index: 100;
 
     display: flex;
     justify-content: space-evenly;
