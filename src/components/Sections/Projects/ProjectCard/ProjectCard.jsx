@@ -11,7 +11,7 @@ const ProjectCard = ({ projectData}) => {
     const openInNewTab = (url) => {
         window.open(url, "_blank", "noreferrer");
       };
-    const projectImage = `https://raw.githubusercontent.com/Aebel-Shajan/${projectData["name"]}/main/thumbnail.png`
+    const projectImage = `https://raw.githubusercontent.com/Aebel-Shajan/${projectData["name"]}/${projectData["default_branch"]}/thumbnail.png`
     
     return (
         <Card 
