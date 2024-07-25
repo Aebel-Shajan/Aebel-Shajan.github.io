@@ -57,38 +57,38 @@ const Contact = () => {
     e.target.reset();
   };
 
-    return (
-        <section id="contact">
-            <Card id="contact-title">
-                <h1>Contact</h1>
-            </Card>
-            <Card id="contact-card">
-                <form id="contact-form" onSubmit={sendEmail}>
-                    <input
-                        id="contact-name"
-                        type="text"
-                        placeholder="name"
-                        name="user_name"
-                        />
-                    <input
-                        id="contact-email"
-                        type="email"
-                        placeholder="email"
-                        name="user_email"
-                        />
-                    <textarea 
-                        id="contact-message"
-                        name="message" />
-                    <input
-                        id="contact-submit"
-                        type="submit"
-                        value="Contact 📨"
-                        disabled={isSubmitting} />
-                </form>
-                {stateMessage && <Card id="state-message">{stateMessage}</Card>}
-            </Card>
-        </section>
-    );
+  return (
+    <section id="contact">
+      <Card id="contact-title">
+        <h1>Contact</h1>
+      </Card>
+      <Card id="contact-card">
+        <form id="contact-form" onSubmit={sendEmail}>
+          <input
+            id="contact-name"
+            type="text"
+            placeholder="name"
+            name="user_name"
+          />
+          <input
+            id="contact-email"
+            type="email"
+            placeholder="email"
+            name="user_email"
+          />
+          <textarea
+            id="contact-message"
+            name="message" />
+          <input
+            id="contact-submit"
+            type="submit"
+            value="Contact 📨"
+            disabled={isSubmitting} />
+        </form>
+        {stateMessage && <Card id="state-message">{stateMessage}</Card>}
+      </Card>
+    </section>
+  );
 }
 
 export default Contact;
