@@ -13,7 +13,13 @@ const Projects = () => {
 
     const getProjectRepos = async (githubLinks) => {
         // Fetch all github repos from github api.
-        const response = await fetch("https://api.github.com/users/aebel-shajan/repos?per_page=100");
+        const response = await fetch("https://api.github.com/users/aebel-shajan/repos?per_page=100",
+            {
+                headers: {
+                    Authorization: `Bearer ${import.meta.env.VITE_GITHUB_TOKEN}`
+                }
+            }
+        );
         if (!response.ok) {
             throw new Error(`Failed to fetch repos! status: ${response.status}`)
         }

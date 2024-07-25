@@ -30,7 +30,9 @@ const ProjectCard = ({ projectData}) => {
                 {projectDate.toDateString()}
             </div>
             <div className="project-skills">
-                {projectData["language"]}
+                <div className="project-skill">
+                    {projectData["language"]}
+                </div>
             </div>
         </Card>
     );
