@@ -1,13 +1,17 @@
 import Card from "@/components/Card/Card";
 import "./ProjectCard.css";
 import { FaGithub} from "react-icons/fa";
+import { useState } from "react";
 
 const ProjectCard = ({ projectData}) => {
+    const [imageError, setImageError]  = useState(false);
+
     const projectDate = new Date(projectData["created_at"])
     const projectLink = projectData["homepage"] ? projectData["homepage"] : projectData["html_url"]
     const openInNewTab = (url) => {
         window.open(url, "_blank", "noreferrer");
       };
+    const projectImage = `https://raw.githubusercontent.com/Aebel-Shajan/${projectData["name"]}/main/thumbnail.png`
     
     return (
         <Card 
@@ -22,6 +26,9 @@ const ProjectCard = ({ projectData}) => {
                 className="project-image"
                 onClick={() => openInNewTab(projectLink)}
                 >
+                {
+                    !imageError && <img src={projectImage} onError={()=> setImageError(true)} />
+                }
             </div>
             <div className="project-title">
                 {projectData["name"]}
