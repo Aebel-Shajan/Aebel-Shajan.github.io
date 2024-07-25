@@ -1,5 +1,6 @@
 import { FaGithub, FaHackerrank, FaLinkedin} from "react-icons/fa";
 import Card from "@/components/Card/Card.jsx";
+import ThreeDModel from "./ThreeDModel/ThreeDModel";
 import "./About.css";
 
 const About = () => {
@@ -12,7 +13,7 @@ const About = () => {
                 I am a Data Engineer.
             </Card>
             <Card id="head">
-                Head
+                <ThreeDModel modelUrl="/squirtle.glb" />
             </Card>
             <Card id="socials">
                 <a href="https://www.github.com/aebel-shajan">
