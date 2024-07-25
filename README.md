@@ -1,20 +1,8 @@
-# Aebels's Personal Website
+# React + Vite
 
-[aebel-shajan.github.io/](https://aebel-shajan.github.io/)
+This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-## Description
+Currently, two official plugins are available:
 
-Github pages website to show case my portfolio.
-
-## Features
-
-List the key features of your website. For example:
-
-- Responsive design
-- Project section with project details
-- Codepen section with iframes of codepen projects
-- CV section which showcases my CV in a pdf viewer
-
-
-## Tech Stack
-Used HTML/CSS/Javascript to create everything.
+- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
+- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh

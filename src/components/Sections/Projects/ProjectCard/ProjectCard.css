@@ -1,0 +1,83 @@
+.project-card {
+    position: relative;
+    width: 16rem;
+    height: 16rem;
+    padding: 1rem;
+
+    overflow: hidden;
+
+    display: grid;
+    grid-template-rows: 9rem 3fr 0.5fr 0.5fr;
+}
+
+.project-image {
+    width: 100%;
+    height: 100%;
+
+    border-radius: 1rem;
+    cursor: pointer;
+    overflow: hidden;
+
+    background: linear-gradient(#e66465, #9198e5);
+}
+
+.project-image > img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+img:after {
+    content: "(url: " attr(src) ")";
+  }
+
+.project-title {
+    width: 100%;
+    padding: 0.2rem;
+
+    text-overflow: hidden;
+    overflow: hidden;
+}
+
+.project-date {
+    text-align: right;
+    font-size: small;
+}
+
+.project-skills {
+    width: 100%;
+}
+
+.project-skill {
+    width: fit-content;
+    padding: 0.3rem;
+
+    font-size: small;
+    color: gainsboro;
+    background-color: black;
+    border-radius: 0.5rem;
+}
+
+.github-link-overlay {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    padding: 1rem;
+
+    font-size: 1.5rem;
+
+    background: rgba(0, 0, 0, 0.7);
+    color: white;
+    border-top-left-radius: 0.5rem;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    text-decoration: none;
+}
+
+.project-card:hover .github-link-overlay {
+    opacity: 1;
+}
+
+.project-card:hover .github-link-overlay:hover {
+    opacity: 1;
+    background-color: blue;
+}

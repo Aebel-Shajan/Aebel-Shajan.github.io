@@ -1,0 +1,38 @@
+#about {
+    padding-bottom: 10rem;
+
+    display: grid;
+    grid-template-areas: 
+            "a a b"
+            "a a b"
+            "c c c";
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 1rem;
+}
+#about > * {
+    padding: 1rem;
+}
+#hello {
+    padding: 4rem;
+
+    font-size:2rem;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+
+
+    grid-area: a;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#head {
+    grid-area: b;
+}
+#socials {
+    font-size: 3rem;
+
+    grid-area: c;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
