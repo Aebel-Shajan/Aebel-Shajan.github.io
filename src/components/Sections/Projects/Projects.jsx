@@ -12,16 +12,40 @@ const Projects = () => {
     const [searchTerm, setSearchTerm] = useState("")
 
     const getProjectRepos = async (githubLinks) => {
+        // Fetch all github repos from github api.
         const response = await fetch("https://api.github.com/users/aebel-shajan/repos?per_page=100");
         if (!response.ok) {
             throw new Error(`Failed to fetch repos! status: ${response.status}`)
         }
         let githubRepos = await response.json();
+
+        // Filter repos to desired ones defined in projects.json
         githubRepos = githubRepos.filter((repo) => {
             return githubLinks.includes(repo["html_url"])
         })
         setProjectRepos(githubRepos)
         return githubRepos
+    }
+
+    const filteredProjectComponents = () => {
+        if (projectRepos.length == 0) {
+            return (
+                <Card id="error-card">
+                    <h3>Failed to fetch projects from github api.</h3>
+                </Card>
+            )
+        }
+
+        return projectRepos
+        .filter(projectData => {
+            if (searchTerm === "") {
+                return true
+            }
+            return projectData["name"].toLowerCase().includes(searchTerm.toLowerCase())
+        })
+        .map(projectData => {
+            return <ProjectCard projectData={projectData} />
+        })
     }
 
     useEffect(() => {
@@ -36,16 +60,7 @@ const Projects = () => {
             <SearchForm setSearchTerm={setSearchTerm} searchTerm={searchTerm}/>
             <div id="project-cards">
                 {
-                    projectRepos
-                    .filter(projectData => {
-                        if (searchTerm === "") {
-                            return true
-                        }
-                        return projectData["name"].toLowerCase().includes(searchTerm.toLowerCase())
-                    })
-                    .map(projectData => {
-                        return <ProjectCard projectData={projectData} />
-                    })
+                    filteredProjectComponents()
                 }
             </div>
         </section >

@@ -14,7 +14,10 @@
     width: 100%;
 
     display: flex;
-    justify-content: space-between;
-    gap: 1.5rem;
+    justify-content: center;
+    gap: 1rem;
     flex-flow: wrap;
+}
+#error-card {
+    padding: 1rem;
 }
