@@ -45,3 +45,14 @@
 #contact-submit {
     grid-area: d
 }
+#state-message {
+    position: fixed;
+    left: 50%;
+    bottom: 1rem;
+    transform: translateX(-50%);
+    padding: 1rem;
+
+    background-color: rgba(89, 209, 249, 0.44);
+    z-index: 100;
+
+}
