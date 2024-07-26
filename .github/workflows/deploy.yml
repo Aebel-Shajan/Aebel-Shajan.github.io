@@ -54,3 +54,8 @@ jobs:
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./dist
+        env:
+          VITE_SERVICE_ID: ${{secrets.VITE_SERVICE_ID}}
+          VITE_TEMPLATE_ID: ${{secrets.VITE_TEMPLATE_ID}}
+          VITE_PUBLIC_KEY: ${{secrets.VITE_PUBLIC_KEY}}
+          VITE_GITHUB_TOKEN: ${{secrets.VITE_GITHUB_TOKEN}}
