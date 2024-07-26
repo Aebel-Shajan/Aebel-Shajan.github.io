@@ -25,10 +25,10 @@ jobs:
       - name: Build project
         run: npm run build
         env:
-          VITE_SERVICE_ID=${{secrets.VITE_SERVICE_ID}}
-          VITE_TEMPLATE_ID=${{secrets.VITE_TEMPLATE_ID}}
-          VITE_PUBLIC_KEY=${{secrets.VITE_PUBLIC_KEY}}
-          VITE_GITHUB_TOKEN=${{secrets.VITE_GITHUB_TOKEN}}
+          VITE_SERVICE_ID: ${{secrets.VITE_SERVICE_ID}}
+          VITE_TEMPLATE_ID: ${{secrets.VITE_TEMPLATE_ID}}
+          VITE_PUBLIC_KEY: ${{secrets.VITE_PUBLIC_KEY}}
+          VITE_GITHUB_TOKEN: ${{secrets.VITE_GITHUB_TOKEN}}
 
       - name: Upload production-ready build files
         uses: actions/upload-artifact@v2
