@@ -4,6 +4,16 @@ import { useState } from "react";
 import emailjs from '@emailjs/browser';
 
 const Contact = () => {
+  if (!import.meta.env.VITE_PUBLIC_KEY) {
+    return (
+      <section id="contact">
+        <Card id="contact-title">
+          <h1>🚧Contact section under construction🚧</h1>
+        </Card>
+      </section>
+    )
+  }
+
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [stateMessage, setStateMessage] = useState(null);
 
