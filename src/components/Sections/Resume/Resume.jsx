@@ -7,13 +7,11 @@ const Resume = () => {
                 <h1>Resume</h1>
             </Card>
             <Card id="resume-card">
-                <embed
-                    id="resume-embed"
-                    type="application/pdf"
-                    src="https://aebel-shajan.github.io/assets/Aebel's%20CV%20(v4).pdf"
-                >
+            <iframe 
+                id="resume-embed"
+                src="https://docs.google.com/document/d/e/2PACX-1vTNwH8Etn0GzTuFsyWIOpU_XDdQceZR6PL4eA2CZhK6-jlWpqYNWZ8N3nas-aK-Ul-DspPoj-Pz53EK/pub?embedded=true">    
+            </iframe>
 
-                </embed>
             </Card>
 
         </section>
