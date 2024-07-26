@@ -26,3 +26,15 @@ html {
 #inner-body {
   width: 50rem;
 }
+
+@media only screen and (max-width: 1000px) {
+  html {
+    font-size: calc(10px + 1vw)
+  }
+
+  #inner-body {
+    width: 100%;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+}

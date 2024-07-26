@@ -21,3 +21,11 @@
 #error-card {
     padding: 1rem;
 }
+
+@media only screen and (max-width: 1000px) {
+    #project-cards {
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+    }
+}

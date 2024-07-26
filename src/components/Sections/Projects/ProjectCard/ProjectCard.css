@@ -81,3 +81,9 @@ img:after {
     opacity: 1;
     background-color: blue;
 }
+
+@media only screen and (max-width: 1000px) {
+    .project-card{
+        width: 100%;
+    }
+}
