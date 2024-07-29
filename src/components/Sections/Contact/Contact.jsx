@@ -4,7 +4,11 @@ import { useState } from "react";
 import emailjs from '@emailjs/browser';
 
 const Contact = () => {
-  if (!import.meta.env.VITE_PUBLIC_KEY) {
+  if (
+    !import.meta.env.VITE_PUBLIC_KEY ||
+    !import.meta.env.VITE_SERVICE_ID ||
+    !import.meta.env.VITE_TEMPLATE_ID
+  ) {
     return (
       <section id="contact">
         <Card id="contact-title">
