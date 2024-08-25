@@ -1,8 +1,6 @@
-# React + Vite
+My personal page made using react and vite. Click the image below ⬇️ to open the website.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+[![](https://github.com/Aebel-Shajan/Aebel-Shajan.github.io/blob/main/thumbnail.png)](https://aebel-shajan.github.io)
 
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Tech used
+I used react and the github api to automatically display my projects depending on what links are in the projects.json file. For the 3d squirtle I used react-three-fiber.
