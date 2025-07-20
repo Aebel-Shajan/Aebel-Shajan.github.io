@@ -7,11 +7,10 @@ const Resume = () => {
                 <h1>Resume</h1>
             </Card>
             <Card id="resume-card">
-            <iframe 
-                id="resume-embed"
-                src="https://docs.google.com/document/d/e/2PACX-1vTNwH8Etn0GzTuFsyWIOpU_XDdQceZR6PL4eA2CZhK6-jlWpqYNWZ8N3nas-aK-Ul-DspPoj-Pz53EK/pub?embedded=true">    
-            </iframe>
-
+                <iframe
+                    id="resume-embed"
+                    src="https://docs.google.com/document/d/e/2PACX-1vTTlaxrMVNcplEfSsGD3MujDUcHFJvqu9g7P5NqwVOronFvi2gRVKr6QCIWtTodwv3hX2VaJSofuXqh/pub?embedded=true"
+                ></iframe>
             </Card>
 
         </section>
