@@ -3,20 +3,24 @@ import "./Contact.css"
 import { useState } from "react";
 import emailjs from '@emailjs/browser';
 
+
+const SERVICE_ID = "service_l0a9crg"
+const PUBLIC_KEY = "93KedpWUhz-tH2a3i"
+const TEMPLATE_ID = "template_fwbd5z1"
 const Contact = () => {
-  if (
-    !import.meta.env.VITE_PUBLIC_KEY ||
-    !import.meta.env.VITE_SERVICE_ID ||
-    !import.meta.env.VITE_TEMPLATE_ID
-  ) {
-    return (
-      <section id="contact">
-        <Card id="contact-title">
-          <h1>🚧Contact section under construction🚧</h1>
-        </Card>
-      </section>
-    )
-  }
+  // if (
+  //   !import.meta.env.VITE_PUBLIC_KEY ||
+  //   !import.meta.env.VITE_SERVICE_ID ||
+  //   !import.meta.env.VITE_TEMPLATE_ID
+  // ) {
+  //   return (
+  //     <section id="contact">
+  //       <Card id="contact-title">
+  //         <h1>🚧Contact section under construction🚧</h1>
+  //       </Card>
+  //     </section>
+  //   )
+  // }
 
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [stateMessage, setStateMessage] = useState(null);
@@ -35,7 +39,7 @@ const Contact = () => {
     setIsSubmitting(true);
 
     emailjs.init({
-      publicKey: import.meta.env.VITE_PUBLIC_KEY
+      publicKey: PUBLIC_KEY
     })
 
     let templateParams = {
@@ -58,8 +62,8 @@ const Contact = () => {
 
     emailjs
       .send(
-        import.meta.env.VITE_SERVICE_ID,
-        import.meta.env.VITE_TEMPLATE_ID,
+        SERVICE_ID,
+        TEMPLATE_ID,
         templateParams
       )
       .then(
