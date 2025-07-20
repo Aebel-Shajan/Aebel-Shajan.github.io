@@ -1,16 +1,31 @@
-import { FaGithub, FaHackerrank, FaLinkedin} from "react-icons/fa";
+import { FaGithub, FaHackerrank, FaLinkedin } from "react-icons/fa";
 import Card from "@/components/Card/Card.jsx";
 import ThreeDModel from "./ThreeDModel/ThreeDModel";
 import "./About.css";
+import { Typewriter } from "react-simple-typewriter";
 
 const About = () => {
-    return ( 
+    return (
         <section id="about">
             <Card id="hello">
-                Hello 👋, my name is Aebel. 
+                <div>
+                    Hello 👋, my name is Aebel.
+                </div>
                 <br />
                 <br />
-                I am a Data Engineer.
+                <div>
+
+                    <span>I am a ...</span>
+                    <Typewriter
+                        words={['data engineer 📊', 'frontend react dev 🧑‍🎨', 'shadcn fan 🎨', 'software enthusiast 🧑‍💻']}
+                        loop={0} // 0 = infinite
+                        cursor
+                        cursorStyle='_'
+                        typeSpeed={70}
+                        deleteSpeed={30}
+                        delaySpeed={2000}
+                    />
+                </div>
             </Card>
             <Card id="head">
                 <ThreeDModel modelUrl="/squirtle.glb" />
@@ -29,5 +44,5 @@ const About = () => {
         </section>
     );
 }
- 
+
 export default About;
