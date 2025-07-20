@@ -4,6 +4,21 @@ import ThreeDModel from "./ThreeDModel/ThreeDModel";
 import "./About.css";
 import { Typewriter } from "react-simple-typewriter";
 
+
+const whoIAm = [
+    'data engineer 📊',
+    'frontend react dev 🧑‍🎨',
+    'threejs sculptor 🗿',
+    'shadcn fan 🎨',
+    'software enthusiast 🧑‍💻',
+    'dashboard wrangler 📈',
+    'linux enjoyer 🐧',
+    'typing noises appreciator ⌨️🎵',
+    'spaghetti code untangler 🍝',
+    'late-stage autocomplete enjoyer ',
+    'part human part chat gpt api wrapper 🤖🎁',
+]
+
 const About = () => {
     return (
         <section id="about">
@@ -17,10 +32,10 @@ const About = () => {
 
                     <span>I am a ...</span>
                     <Typewriter
-                        words={['data engineer 📊', 'frontend react dev 🧑‍🎨', 'shadcn fan 🎨', 'software enthusiast 🧑‍💻']}
+                        words={whoIAm}
                         loop={0} // 0 = infinite
                         cursor
-                        cursorStyle='_'
+                        cursorStyle='|'
                         typeSpeed={70}
                         deleteSpeed={30}
                         delaySpeed={2000}
@@ -28,7 +43,7 @@ const About = () => {
                 </div>
             </Card>
             <Card id="head">
-                <ThreeDModel modelUrl="/squirtle.glb" />
+                <ThreeDModel modelUrl="/aebel-avatar.glb" />
             </Card>
             <Card id="socials">
                 <a href="https://www.github.com/aebel-shajan">
